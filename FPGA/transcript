@@ -34,10 +34,10 @@
 # Time:                   50, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                   50, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # 
-# Time:                   70, nucl_alig_0: 10101010110100101011010101101000, final_result_0: 00000000000000000000000000000000
-# Time:                   70, nucl_alig_1: 10101010110100101011010101101001, final_result_1: 00000000000000000000000000000000
-# Time:                   70, nucl_alig_2: 10101010110100101011010101101010, final_result_2: 00000000000000000000000000000000
-# Time:                   70, nucl_alig_3: 10101010110100101011010101101011, final_result_3: 00000000000000000000000000000000
+# Time:                   70, nucl_alig_0: 10101010110100101011010101101000, final_result_0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Time:                   70, nucl_alig_1: 10101010110100101011010101101001, final_result_1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Time:                   70, nucl_alig_2: 10101010110100101011010101101010, final_result_2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Time:                   70, nucl_alig_3: 10101010110100101011010101101011, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                   70, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                   70, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                   70, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -61,37 +61,37 @@
 # Time:                  110, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  110, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # 
-# Time:                  130, nucl_alig_0: 10101010110100101011010101101000, final_result_0: 00000000000000000000000000000000
+# Time:                  130, nucl_alig_0: 10101010110100101011010101101000, final_result_0: 01010101010101000000000000000000
 # Time:                  130, nucl_alig_1: 10101010110100101011010101101001, final_result_1: 00000000000000000000000000000000
-# Time:                  130, nucl_alig_2: 10101010110100101011010101101010, final_result_2: 00000000000000000000000000000000
+# Time:                  130, nucl_alig_2: 10101010110100101011010101101010, final_result_2: 01010101010101000000000000000000
 # Time:                  130, nucl_alig_3: 10101010110100101011010101101011, final_result_3: 00000000000000000000000000000000
 # Time:                  130, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  130, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  130, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  130, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # 
-# Time:                  150, nucl_alig_0: 10101010110100101011010101101000, final_result_0: 00000000000000000000000000000000
+# Time:                  150, nucl_alig_0: 10101010110100101011010101101000, final_result_0: 01010101010101010101010101010101
 # Time:                  150, nucl_alig_1: 10101010110100101011010101101001, final_result_1: 00000000000000000000000000000000
-# Time:                  150, nucl_alig_2: 10101010110100101011010101101010, final_result_2: 00000000000000000000000000000000
+# Time:                  150, nucl_alig_2: 10101010110100101011010101101010, final_result_2: 01010101010101010101010101010101
 # Time:                  150, nucl_alig_3: 10101010110100101011010101101011, final_result_3: 00000000000000000000000000000000
 # Time:                  150, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  150, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  150, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  150, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # 
-# Time:                  170, nucl_alig_0: 10101010110100101011010101101000, final_result_0: 01010101010101010101010101010101
-# Time:                  170, nucl_alig_1: 10101010110100101011010101101001, final_result_1: 00000000000000000000000000000000
-# Time:                  170, nucl_alig_2: 10101010110100101011010101101010, final_result_2: 01010101010101010101010101010101
-# Time:                  170, nucl_alig_3: 10101010110100101011010101101011, final_result_3: 00000000000000000000000000000000
+# Time:                  170, nucl_alig_0: 10101010110100101011010101101000, final_result_0: 10101010101010101010101010010101
+# Time:                  170, nucl_alig_1: 10101010110100101011010101101001, final_result_1: 01010101010101000000000000000000
+# Time:                  170, nucl_alig_2: 10101010110100101011010101101010, final_result_2: 10101010101010101010101010010101
+# Time:                  170, nucl_alig_3: 10101010110100101011010101101011, final_result_3: 01010101010101000000000000000000
 # Time:                  170, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  170, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  170, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  170, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # 
-# Time:                  190, nucl_alig_0: 10101010110100101011010101101000, final_result_0: 01010101010101010101010101010101
-# Time:                  190, nucl_alig_1: 10101010110100101011010101101001, final_result_1: 00000000000000000000000000000000
-# Time:                  190, nucl_alig_2: 10101010110100101011010101101010, final_result_2: 01010101010101010101010101010101
-# Time:                  190, nucl_alig_3: 10101010110100101011010101101011, final_result_3: 00000000000000000000000000000000
+# Time:                  190, nucl_alig_0: 10101010110100101011010101101000, final_result_0: 11111111111111111111111111101010
+# Time:                  190, nucl_alig_1: 10101010110100101011010101101001, final_result_1: 11111110101010101010010101010101
+# Time:                  190, nucl_alig_2: 10101010110100101011010101101010, final_result_2: 11111111111111111111111111101010
+# Time:                  190, nucl_alig_3: 10101010110100101011010101101011, final_result_3: 11111110101010101010010101010101
 # Time:                  190, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  190, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Time:                  190, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

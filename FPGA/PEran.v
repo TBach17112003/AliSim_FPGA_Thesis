@@ -53,6 +53,7 @@ module PEran (
         .prob_C(selected_matrix_0[29:20]),
         .prob_G(selected_matrix_0[19:10]),
         .prob_T(selected_matrix_0[09:00]),
+        .instance_ID(4'd0),
         .result(final_result[1:0])
     );
     RG M1(
@@ -62,6 +63,7 @@ module PEran (
         .prob_C(selected_matrix_1[29:20]),
         .prob_G(selected_matrix_1[19:10]),
         .prob_T(selected_matrix_1[09:00]),
+        .instance_ID(4'd1),
         .result(final_result[3:2])
     );
     RG M2(
@@ -71,6 +73,7 @@ module PEran (
         .prob_C(selected_matrix_2[29:20]),
         .prob_G(selected_matrix_2[19:10]),
         .prob_T(selected_matrix_2[09:00]),
+        .instance_ID(4'd2),
         .result(final_result[5:4])
     );
     RG M3(
@@ -80,6 +83,7 @@ module PEran (
         .prob_C(selected_matrix_3[29:20]),
         .prob_G(selected_matrix_3[19:10]),
         .prob_T(selected_matrix_3[09:00]),
+        .instance_ID(4'd3),
         .result(final_result[7:6])
     );
     RG M4(
@@ -89,6 +93,7 @@ module PEran (
         .prob_C(selected_matrix_4[29:20]),
         .prob_G(selected_matrix_4[19:10]),
         .prob_T(selected_matrix_4[09:00]),
+        .instance_ID(4'd4),
         .result(final_result[9:8])
     );
     RG M5(
@@ -98,6 +103,7 @@ module PEran (
         .prob_C(selected_matrix_5[29:20]),
         .prob_G(selected_matrix_5[19:10]),
         .prob_T(selected_matrix_5[09:00]),
+        .instance_ID(4'd5),
         .result(final_result[11:10])
     );
     RG M6(
@@ -107,6 +113,7 @@ module PEran (
         .prob_C(selected_matrix_6[29:20]),
         .prob_G(selected_matrix_6[19:10]),
         .prob_T(selected_matrix_6[09:00]),
+        .instance_ID(4'd6),
         .result(final_result[13:12])
     );
     RG M7(
@@ -116,6 +123,7 @@ module PEran (
         .prob_C(selected_matrix_7[29:20]),
         .prob_G(selected_matrix_7[19:10]),
         .prob_T(selected_matrix_7[09:00]),
+        .instance_ID(4'd7),
         .result(final_result[15:14])
     );
     RG M8(
@@ -125,6 +133,7 @@ module PEran (
         .prob_C(selected_matrix_8[29:20]),
         .prob_G(selected_matrix_8[19:10]),
         .prob_T(selected_matrix_8[09:00]),
+        .instance_ID(4'd8),
         .result(final_result[17:16])
     );
     RG M9(
@@ -134,6 +143,7 @@ module PEran (
         .prob_C(selected_matrix_9[29:20]),
         .prob_G(selected_matrix_9[19:10]),
         .prob_T(selected_matrix_9[09:00]),
+        .instance_ID(4'd9),
         .result(final_result[19:18])
     );
     RG M10(
@@ -143,6 +153,7 @@ module PEran (
         .prob_C(selected_matrix_10[29:20]),
         .prob_G(selected_matrix_10[19:10]),
         .prob_T(selected_matrix_10[09:00]),
+        .instance_ID(4'd10),
         .result(final_result[21:20])
     );
     RG M11(
@@ -152,6 +163,7 @@ module PEran (
         .prob_C(selected_matrix_11[29:20]),
         .prob_G(selected_matrix_11[19:10]),
         .prob_T(selected_matrix_11[09:00]),
+        .instance_ID(4'd11),
         .result(final_result[23:22])
     );
     RG M12(
@@ -161,6 +173,7 @@ module PEran (
         .prob_C(selected_matrix_12[29:20]),
         .prob_G(selected_matrix_12[19:10]),
         .prob_T(selected_matrix_12[09:00]),
+        .instance_ID(4'd12),
         .result(final_result[25:24])
     );
     RG M13(
@@ -170,6 +183,7 @@ module PEran (
         .prob_C(selected_matrix_13[29:20]),
         .prob_G(selected_matrix_13[19:10]),
         .prob_T(selected_matrix_13[09:00]),
+        .instance_ID(4'd13),
         .result(final_result[27:26])
     );
     RG M14(
@@ -179,6 +193,7 @@ module PEran (
         .prob_C(selected_matrix_14[29:20]),
         .prob_G(selected_matrix_14[19:10]),
         .prob_T(selected_matrix_14[09:00]),
+        .instance_ID(4'd14),
         .result(final_result[29:28])
     );
     RG M15(
@@ -188,6 +203,7 @@ module PEran (
         .prob_C(selected_matrix_15[29:20]),
         .prob_G(selected_matrix_15[19:10]),
         .prob_T(selected_matrix_15[09:00]),
+        .instance_ID(4'd15),
         .result(final_result[31:30])
     );
 endmodule

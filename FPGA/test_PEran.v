@@ -36,7 +36,7 @@ module PEran_tb;
         // matrix_P = 160'hFA00000000003E80000000000FA00000000003E8;
         // #20
         nucl_alig = 32'b01010001011001010010110101010101;
-        matrix_P = 160'h3E8FA3E8FA3E8FA3E8FA3E8FA3E8FA3E8FA3E8FA;
+        matrix_P = 160';
         #100
         $stop;
     end

@@ -5,16 +5,25 @@ module RG (
     input [9:0] prob_C,
     input [9:0] prob_G,
     input [9:0] prob_T, 
+    input [3:0] instance_ID,
     output reg [1:0] result      
 );
     wire [9:0] random_val;
     wire [9:0] probability_A, probability_C, probability_G, probability_T;
-
+    reg reseed_en;
     parameter A = 2'b00, C = 2'b01, G = 2'b10, T = 2'b11;
+    wire [9:0] temp = (prob_A ^ prob_C ^ prob_G ^ prob_T) + instance_ID;
+    // assign temp[9:4] = prob_A[9:4] ^ prob_C[9:4] ^ prob_G[9:4] ^ prob_T[9:4];
+    // assign temp[3:0] = (prob_A[3:0] ^ prob_C[3:0] ^ prob_G[3:0] ^ prob_T[3:0]) | instance_ID;
+    always @(temp) begin
+        reseed_en <= 1;
+    end
 
     random_module Ran_inst(
         .clk(clk),
         .reset(reset),
+        .seed(temp),
+        .reseed_en(reseed_en),
         .random_output(random_val)
     );
     
@@ -45,6 +54,7 @@ module RG (
                     result <= T;
             end
         end
+        reseed_en <= 0;
         // $display("random_val: %d, probability_A: %d, C: %d, G: %d, T: %d", 
         //     random_val, probability_A, probability_C, probability_G, probability_T);
 

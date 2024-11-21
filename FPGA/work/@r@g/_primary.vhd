@@ -14,6 +14,7 @@ entity RG is
         prob_C          : in     vl_logic_vector(9 downto 0);
         prob_G          : in     vl_logic_vector(9 downto 0);
         prob_T          : in     vl_logic_vector(9 downto 0);
+        instance_ID     : in     vl_logic_vector(3 downto 0);
         result          : out    vl_logic_vector(1 downto 0)
     );
     attribute mti_svvh_generic_type : integer;
