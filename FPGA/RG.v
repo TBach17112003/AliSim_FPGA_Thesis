@@ -7,9 +7,17 @@ module RG (
     input [9:0] prob_T, 
     output reg [1:0] result      
 );
-
-    reg [9:0] random_val;
+    wire [9:0] random_val;
     wire [9:0] probability_A, probability_C, probability_G, probability_T;
+
+    parameter A = 2'b00, C = 2'b01, G = 2'b10, T = 2'b11;
+
+    random_module Ran_inst(
+        .clk(clk),
+        .reset(reset),
+        .random_output(random_val)
+    );
+    
     
     assign probability_A = prob_A;
     assign probability_C = prob_A + prob_C;
@@ -18,24 +26,23 @@ module RG (
     
     always @(posedge clk) begin
         if (reset) begin
-            random_val <= 0;
             result <= 2'b00;
         end
         else begin
-            // Sinh giá trị ngẫu nhiên từ 0 đến 999
-            random_val <= $random % 1000;
-            // Đảm bảo tổng tỷ lệ không vượt quá 1000
+            // // Sinh giá trị ngẫu nhiên từ 0 đến 999
+            // random_val <= $random % 1000;
+            // // Đảm bảo tổng tỷ lệ không vượt quá 1000
             if (probability_T > 1000) begin
                 result = 2'bx;
             end else begin
                 if (random_val < probability_A)
-                    result <= 2'b00;
+                    result <= A;
                 else if (random_val < probability_C)
-                    result <= 2'b01;
+                    result <= C;
                 else if (random_val < probability_G)        
-                    result <= 2'b10;
+                    result <= G;
                 else if (random_val < probability_T)
-                    result <= 2'b11;
+                    result <= T;
             end
         end
         // $display("random_val: %d, probability_A: %d, C: %d, G: %d, T: %d", 

@@ -20,7 +20,7 @@ module PE (
     output [39:0] selected_matrix_14,
     output [39:0] selected_matrix_15
 );
-
+    parameter A = 2'b00, C = 2'b01, G = 2'b10, T = 2'b11;
     integer i;
     reg [1:0] nucl_group; // Nhóm 2 bit tạm thời để xử lý
     reg [39:0] selected_matrix_internal [0:15];
@@ -37,10 +37,10 @@ module PE (
                 nucl_group = nucl_alig[i*2 +: 2]; // Lấy nhóm 2 bit từ nucl_alig
                 // $display("nucl  %b\n", nucl_group);
                 case (nucl_group)
-                    2'b00: selected_matrix_internal[i] <= matrix_P[159:120];
-                    2'b01: selected_matrix_internal[i] <= matrix_P[119:80];
-                    2'b10: selected_matrix_internal[i] <= matrix_P[79:40];
-                    2'b11: selected_matrix_internal[i] <= matrix_P[39:0];
+                    A: selected_matrix_internal[i] <= matrix_P[159:120];
+                    C: selected_matrix_internal[i] <= matrix_P[119:80];
+                    G: selected_matrix_internal[i] <= matrix_P[79:40];
+                    T: selected_matrix_internal[i] <= matrix_P[39:0];
                     default: selected_matrix_internal[i] <= 40'bx; // Trường hợp không mong muốn
                 endcase
             end
