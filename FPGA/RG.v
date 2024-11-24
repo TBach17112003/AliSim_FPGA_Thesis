@@ -7,41 +7,42 @@ module RG (
     input [9:0] prob_T, 
     input [3:0] instance_ID,
     output reg [1:0] result      
-);
-    wire [9:0] random_val;
-    wire [9:0] probability_A, probability_C, probability_G, probability_T;
-    reg reseed_en;
+);  
     parameter A = 2'b00, C = 2'b01, G = 2'b10, T = 2'b11;
-    wire [9:0] temp = (prob_A ^ prob_C ^ prob_G ^ prob_T) + instance_ID;
-    // assign temp[9:4] = prob_A[9:4] ^ prob_C[9:4] ^ prob_G[9:4] ^ prob_T[9:4];
-    // assign temp[3:0] = (prob_A[3:0] ^ prob_C[3:0] ^ prob_G[3:0] ^ prob_T[3:0]) | instance_ID;
-    always @(temp) begin
-        reseed_en <= 1;
-    end
+    wire [11:0] random_val;
+    // wire [11:0] probability_A, probability_C, probability_G, probability_T;
 
-    random_module Ran_inst(
+    //Không sử dụng lại để tính toán nên gán trực tiếp
+    wire [11:0] probability_A = prob_A;
+    wire [11:0] probability_C = prob_A + prob_C;
+    wire [11:0] probability_G = prob_A + prob_C + prob_G;
+
+    // Trường hợp 4 giá trị tối đa 10 bit là 1023 => 4092  => 11 bit 
+    // Sử dụng phép chia lấy nguyên giá trị này để ra được giá trị random
+    wire [11:0] probability_T = prob_A + prob_C + prob_G + prob_T;
+    
+    // Tạo seed bằng cách kết hợp giá trị P ban đầu của mỗi loài kết hợp với ID của các random
+    wire [10:0] seed = (prob_A ^ prob_C ^ prob_G ^ prob_T) + instance_ID;
+    
+    // assign probability_A = prob_A;
+    // assign probability_C = prob_A + prob_C;
+    // assign probability_G = prob_A + prob_C + prob_G;
+    // assign probability_T = prob_A + prob_C + prob_G + prob_T;
+
+    random_module Raninst (
         .clk(clk),
         .reset(reset),
-        .seed(temp),
-        .reseed_en(reseed_en),
+        .seed(seed),
+        .sum(probability_T),
         .random_output(random_val)
     );
-    
-    
-    assign probability_A = prob_A;
-    assign probability_C = prob_A + prob_C;
-    assign probability_G = prob_A + prob_C + prob_G;
-    assign probability_T = prob_A + prob_C + prob_G + prob_T;
     
     always @(posedge clk) begin
         if (reset) begin
             result <= 2'b00;
         end
         else begin
-            // // Sinh giá trị ngẫu nhiên từ 0 đến 999
-            // random_val <= $random % 1000;
-            // // Đảm bảo tổng tỷ lệ không vượt quá 1000
-            if (probability_T > 1000) begin
+            if (probability_T > 4093) begin
                 result = 2'bx;
             end else begin
                 if (random_val < probability_A)
@@ -54,10 +55,6 @@ module RG (
                     result <= T;
             end
         end
-        reseed_en <= 0;
-        // $display("random_val: %d, probability_A: %d, C: %d, G: %d, T: %d", 
-        //     random_val, probability_A, probability_C, probability_G, probability_T);
-
     end
 endmodule
 

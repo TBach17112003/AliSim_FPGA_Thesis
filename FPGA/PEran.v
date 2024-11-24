@@ -5,6 +5,7 @@ module PEran (
     input [159:0] matrix_P,
     output [31:0] final_result
 );
+    //Nối dây từ khối PE đến các Random
     wire [39:0] selected_matrix_0;
     wire [39:0] selected_matrix_1;
     wire [39:0] selected_matrix_2;

@@ -5,13 +5,13 @@ module Controller (
   output reg [31:0] nucl_alig_0, nucl_alig_1, nucl_alig_2, nucl_alig_3, nucl_alig_4, nucl_alig_5, nucl_alig_6, nucl_alig_7,
   output reg [159:0] matrix_P_0, matrix_P_1, matrix_P_2, matrix_P_3, matrix_P_4, matrix_P_5, matrix_P_6, matrix_P_7
 );
-  reg [194:0] memory [0:7];  // Mảng lưu dữ liệu nhị phân (1 phần tử, mỗi phần tử 34 bit)
-  //reg [2:0] cycle_counter;
-  // Tách dữ liệu đọc được
+reg [194:0] memory [0:7];  // Mảng lưu dữ liệu nhị phân (1 phần tử, mỗi phần tử 34 bit)
+reg [2:0] cycle_counter;
+
   initial begin
     // Đọc dữ liệu từ tệp 'data.txt' vào bộ nhớ memory[0]
     $readmemb("output.txt", memory);  
-    //cycle_counter = 0;
+    cycle_counter = 0;
     // Hiển thị kết quả đã đọc
     // $display("Data[0]: %b\n", memory[0]);
     // $display("Data[1]: %b\n", memory[1]);
@@ -24,7 +24,7 @@ module Controller (
   end
   always @(posedge clk or posedge reset) begin
     if (reset) begin
-      // cycle_counter <= 0;
+      cycle_counter <= 0;
       pos_0 <= 3'bx;
       pos_1 <= 3'bx;
       pos_2 <= 3'bx;

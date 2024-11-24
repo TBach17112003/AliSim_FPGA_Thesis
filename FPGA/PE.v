@@ -46,6 +46,7 @@ module PE (
             end
         end
     end
+    // Lấy ra các Prob theo từng vị trí Nucl nếu thiết kế chuỗi dài hơn có thể tăng số lượng ở đây
     assign selected_matrix_0 = selected_matrix_internal[0];
     assign selected_matrix_1 = selected_matrix_internal[1];
     assign selected_matrix_2 = selected_matrix_internal[2];

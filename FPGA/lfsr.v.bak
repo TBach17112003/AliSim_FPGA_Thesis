@@ -1,0 +1,36 @@
+module lfsr (
+    input wire clk,
+    input wire reset,
+    input wire [10:0] seed,    // External seed input
+    // input wire reseed_en,     // Reseed enable signal
+    output reg [32:0] rand_val
+);
+
+    // Feedback logic for 11-bit LFSR with polynomial
+    // parameter seed = 10'b1010101010;
+    
+    reg first = 2'b1;
+    wire feedback_0 = rand_val[09] ^ rand_val[06];
+    wire feedback_1 = rand_val[19] ^ rand_val[16];
+    wire feedback_2 = rand_val[29] ^ rand_val[26];
+    always @(seed) begin
+        if ((seed !== 11'bx) & first & !reset) begin
+            rand_val[10:0] <= seed;
+            rand_val[21:11] <= !seed;
+            rand_val[32:22] <= {seed[0], seed[1], seed[2], seed[3], seed[4], seed[5], seed[6], seed[7], seed[8], seed[9], seed[10]};
+            // first <= 0;
+        end
+    end
+    always @(posedge clk) begin
+        if (reset) begin
+            rand_val <= 33'd1; // Initialize with a non-zero values
+            first <= 1;
+        // end else if (signal) begin
+        //     rand_val <= seed;
+        //     first <= 0;
+        end else begin
+            rand_val <= {rand_val[32:22], feedback_2,rand_val[21:11], feedback_1,rand_val[10:0], feedback_0}; // Shift and feedback
+        end
+    end
+
+endmodule

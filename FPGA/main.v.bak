@@ -1,6 +1,6 @@
 `timescale 1ps/1ps
 module main;
-    // Liên kết các khối
+
     reg clk;
     reg reset;
     wire [2:0] pos_0, pos_1, pos_2, pos_3, pos_4, pos_5, pos_6, pos_7;
@@ -104,7 +104,7 @@ module main;
         reset = 1;
         #5
         reset = 0;
-        #400
+        #2000
         $stop;
     end
 
