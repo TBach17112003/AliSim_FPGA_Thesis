@@ -17,41 +17,41 @@ Z8 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z9 !s108 1732366464.737000
-Z10 !s107 lfsr.v|random_module.v|main.v|controller.v|PEran.v|PE.v|RG.v|
-Z11 !s90 RG.v|PE.v|PEran.v|controller.v|main.v|random_module.v|lfsr.v|
+Z9 !s108 1733467855.376000
+Z10 !s107 test_random.v|test_PEran.v|test_PE.v|test_main.v|test_Controller.v|RG.v|random_module.v|PEran.v|PE.v|main.v|lfsr.v|controller.v|
+Z11 !s90 controller.v|lfsr.v|main.v|PE.v|PEran.v|random_module.v|RG.v|test_Controller.v|test_main.v|test_PE.v|test_PEran.v|test_random.v|
 !s101 -O0
 o-O0
 Z12 n@controller
 vController_tb
-Z13 I?M7J5Ci=e7c7gIMKma;0M1
-Z14 VcNdGiL;S:j60IlMEe:aK_3
-Z15 dG:\Torture\RESEARCH\ADN_ARN\Alisim_code\FPGA
-Z16 w1731740190
+!i10b 1
+Z13 !s100 >HBZ`ZdE>B5lc;fQ7KmQl1
+Z14 I?M7J5Ci=e7c7gIMKma;0M1
+Z15 VcNdGiL;S:j60IlMEe:aK_3
+R4
+Z16 w1732161436
 Z17 8test_Controller.v
 Z18 Ftest_Controller.v
 L0 3
 R8
 r1
-31
-Z19 !s108 1731740201.844000
-Z20 !s107 test_Controller.v|Controller.v|
-Z21 !s90 Controller.v|test_Controller.v|
-o-O0
-Z22 n@controller_tb
-Z23 !s100 >HBZ`ZdE>B5lc;fQ7KmQl1
-!i10b 1
 !s85 0
+31
+R9
+R10
+R11
 !s101 -O0
+o-O0
+Z19 n@controller_tb
 vlfsr
 !i10b 1
-!s100 WA;Ygg?<;UZ<HGgMgzbdf2
-I8^TSHbF1B0hECTM>D<KEb2
-Z24 VghU4U7TcKBEJFU[>3eb>Q3
+Z20 !s100 nbS725X@jaHgE94n?J09M0
+Z21 I6_S[Q4V:@ZRYII?dGb[5Q0
+Z22 VghU4U7TcKBEJFU[>3eb>Q3
 R4
-w1732359883
-Z25 8lfsr.v
-Z26 Flfsr.v
+w1733467851
+Z23 8lfsr.v
+Z24 Flfsr.v
 L0 1
 R8
 r1
@@ -64,13 +64,13 @@ R11
 o-O0
 vmain
 !i10b 1
-Z27 !s100 8PB;mWU^lZTUONAG<nE]e2
-Z28 IgoB[1o>Fj7^Tc5FG95[E=2
-Z29 VEAT@0_d?1jQUQ5cgEJon`1
+Z25 !s100 8PB;mWU^lZTUONAG<nE]e2
+Z26 IgoB[1o>Fj7^Tc5FG95[E=2
+Z27 VEAT@0_d?1jQUQ5cgEJon`1
 R4
-Z30 w1732359673
-Z31 8main.v
-Z32 Fmain.v
+Z28 w1732359673
+Z29 8main.v
+Z30 Fmain.v
 L0 2
 R8
 r1
@@ -82,32 +82,32 @@ R11
 !s101 -O0
 o-O0
 vmoduleName
-Z33 IngoTn4gj8zk:nfjmFQkRR3
-Z34 Vo3R4TYRbGmKoEn_8NT5^83
-R15
-Z35 w1731746171
-Z36 8test_main.v
-Z37 Ftest_main.v
+Z31 IngoTn4gj8zk:nfjmFQkRR3
+Z32 Vo3R4TYRbGmKoEn_8NT5^83
+Z33 dG:\Torture\RESEARCH\ADN_ARN\Alisim_code\FPGA
+Z34 w1731746171
+Z35 8test_main.v
+Z36 Ftest_main.v
 L0 2
 R8
 r1
 31
-Z38 !s108 1731746175.161000
-Z39 !s107 test_main.v|main.v|PE.v|Controller.v|
-Z40 !s90 Controller.v|PE.v|main.v|test_main.v|
+Z37 !s108 1731746175.161000
+Z38 !s107 test_main.v|main.v|PE.v|Controller.v|
+Z39 !s90 Controller.v|PE.v|main.v|test_main.v|
 o-O0
-Z41 nmodule@name
-Z42 !s100 _J4lhgIigUNViGf0DQGXn1
+Z40 nmodule@name
+Z41 !s100 _J4lhgIigUNViGf0DQGXn1
 !i10b 1
 !s85 0
 !s101 -O0
 vPE
 !i10b 1
-Z43 !s100 KZ:OPlTN>>mlG]zW=?[[c1
-Z44 IS>jkD8Z7djX=9>>3UNXFR2
-Z45 V_B><DcQHJNAdmVWM67]kG2
+Z42 !s100 Ecoh_Y`WdXhogH6[5QlCD3
+Z43 IhKfNC:KJ;>9PE3O1mdj[53
+Z44 V_B><DcQHJNAdmVWM67]kG2
 R4
-Z46 w1732359582
+Z45 w1732359582
 8PE.v
 FPE.v
 L0 1
@@ -122,34 +122,34 @@ R11
 o-O0
 n@p@e
 vPE_tb
-Z47 !s100 dW:AjE33XGlkn`ZCRn2;m2
-Z48 IB>jKo=Pc<]U=DM34cQKc33
-Z49 V7cS70i;:YARl2PX>I?M0m2
-R15
-Z50 w1731750039
-Z51 8test_PE.v
-Z52 Ftest_PE.v
+!i10b 1
+Z46 !s100 dW:AjE33XGlkn`ZCRn2;m2
+Z47 IB>jKo=Pc<]U=DM34cQKc33
+Z48 V7cS70i;:YARl2PX>I?M0m2
+R4
+R16
+Z49 8test_PE.v
+Z50 Ftest_PE.v
 L0 3
 R8
 r1
-31
-Z53 !s108 1731750362.804000
-Z54 !s107 test_PE.v|test_main.v|main.v|PE.v|Controller.v|
-Z55 !s90 Controller.v|PE.v|main.v|test_main.v|test_PE.v|
-o-O0
-Z56 n@p@e_tb
-!i10b 1
 !s85 0
+31
+R9
+R10
+R11
 !s101 -O0
+o-O0
+Z51 n@p@e_tb
 vPEran
 !i10b 1
-Z57 !s100 9zlG31U:bI4k@X?zYJBSj1
-Z58 Id<7Gf@zOnbA[K@z8cG<<A0
-Z59 VjYTIVgE3mEbA`H^@Sj]_73
+Z52 !s100 G:^kLOS<C9dIfSO?IAlZ33
+Z53 IgLC5bf[PU?5H3=D1NE;gW3
+Z54 VjYTIVgE3mEbA`H^@Sj]_73
 R4
-Z60 w1732359612
-Z61 8PEran.v
-Z62 FPEran.v
+Z55 w1732359612
+Z56 8PEran.v
+Z57 FPEran.v
 L0 1
 R8
 r1
@@ -160,36 +160,36 @@ R10
 R11
 !s101 -O0
 o-O0
-Z63 n@p@eran
+Z58 n@p@eran
 vPEran_tb
-Z64 !s100 4>ZB_5lli4Lb@_AHJm3:00
-Z65 I`?g6=WZUimIh[o<V1TLlj3
-Z66 V;zZ9KPO`6;lCR3Mb:;;]]2
-R15
-Z67 w1731757075
-Z68 8test_PEran.v
-Z69 Ftest_PEran.v
+!i10b 1
+Z59 !s100 _Qaj=Lc92m>?f__5a9F3Z1
+Z60 IJ0?;WBQLANAPN069F^PAA3
+Z61 V;zZ9KPO`6;lCR3Mb:;;]]2
+R4
+Z62 w1733467439
+Z63 8test_PEran.v
+Z64 Ftest_PEran.v
 L0 2
 R8
 r1
-31
-Z70 !s108 1731758325.260000
-Z71 !s107 test_random.v|test_PEran.v|PEran.v|PE.v|random.v|
-Z72 !s90 random.v|PE.v|PEran.v|test_PEran.v|test_random.v|
-o-O0
-Z73 n@p@eran_tb
-!i10b 1
 !s85 0
+31
+R9
+R10
+R11
 !s101 -O0
+o-O0
+Z65 n@p@eran_tb
 vrandom_module
 !i10b 1
-Z74 !s100 G94a[=ZzN`V6B<Qe3265T3
-Z75 I^1@i4j8jH:KUI23fT>AY51
-Z76 Vc54<G:77gL]]CHd<Z1CI13
+Z66 !s100 G94a[=ZzN`V6B<Qe3265T3
+Z67 I^1@i4j8jH:KUI23fT>AY51
+Z68 Vc54<G:77gL]]CHd<Z1CI13
 R4
-Z77 w1732359748
-Z78 8random_module.v
-Z79 Frandom_module.v
+Z69 w1732359748
+Z70 8random_module.v
+Z71 Frandom_module.v
 L0 1
 R8
 r1
@@ -202,11 +202,11 @@ R11
 o-O0
 vRG
 !i10b 1
-Z80 !s100 956@NIj[P>_<@Y?SPKM090
-Z81 I4mdWi=Sj3cbXO=zZA4HH32
-Z82 VT;3[;@7dKBDEaji_18ZB`0
+Z72 !s100 HFMiK7V?db>z2]WaQi4nD3
+Z73 I1eC@Y236czY2o=>cAJ[JC3
+Z74 VT;3[;@7dKBDEaji_18ZB`0
 R4
-Z83 w1732359512
+Z75 w1732359512
 8RG.v
 FRG.v
 L0 1
@@ -221,41 +221,41 @@ R11
 o-O0
 n@r@g
 vRG_tb
-Z84 !s100 ]1``G;B<a>hUknkk@13B13
-Z85 IBC:oaTC;W;<A2;VNz1Xjn3
-Z86 VecUMeMk0=]<QZ35ZHQFX51
-R15
-Z87 w1731753446
-Z88 8test_random.v
-Z89 Ftest_random.v
+!i10b 1
+Z76 !s100 ]1``G;B<a>hUknkk@13B13
+Z77 IBC:oaTC;W;<A2;VNz1Xjn3
+Z78 VecUMeMk0=]<QZ35ZHQFX51
+R4
+R16
+Z79 8test_random.v
+Z80 Ftest_random.v
 L0 3
 R8
 r1
-31
-R70
-R71
-R72
-o-O0
-Z90 n@r@g_tb
-!i10b 1
 !s85 0
+31
+R9
+R10
+R11
 !s101 -O0
+o-O0
+Z81 n@r@g_tb
 vtest
-Z91 !s100 6Rh75HQIzB_L]gIe266Q=3
-Z92 Ie;QoPO5`gZ4XBSj4]`4;W1
-Z93 Vk<3<[f=78GX=_HO53D;7>3
-R15
-Z94 w1731750112
+!i10b 1
+Z82 !s100 WHe6BkkOYTZYIW9YfoRlF1
+Z83 IkYi8]b5U6?eo:58o:4>1<3
+Z84 Vk<3<[f=78GX=_HO53D;7>3
+R4
+R16
+R35
 R36
-R37
 L0 2
 R8
 r1
-31
-R53
-R54
-R55
-o-O0
-!i10b 1
 !s85 0
+31
+R9
+R10
+R11
 !s101 -O0
+o-O0

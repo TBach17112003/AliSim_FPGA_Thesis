@@ -18,7 +18,7 @@ module lfsr (
             // Có thể thiết kế mỗi nhóm nhận vào sẽ nuôi một seed khác nhau
         end else if (first== 1) begin
             // Trộn giá trị Seed kết hợp với id của mỗi khối Random
-            if ((seed !== 11'bx) & (seed != 11'd0)) begin
+            if (seed != 11'd0) begin
                 rand_val[10:0] <= seed;
                 rand_val[21:11] <= ~seed;
                 rand_val[32:22] <= {seed[0], seed[1], seed[2], seed[3], seed[4], 
