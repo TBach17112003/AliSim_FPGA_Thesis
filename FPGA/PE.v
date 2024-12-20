@@ -31,7 +31,7 @@ module PE (
             for (i = 0; i < 16; i = i + 1) begin
                 selected_matrix_internal[i] <= 40'b0;
             end
-        end else begin
+        end else if ((nucl_alig != 0) && (matrix_P != 0)) begin
             // Xử lý từng nhóm 2 bit của nucl_alig
             for (i = 0; i < 16; i = i + 1) begin
                 nucl_group = nucl_alig[i*2 +: 2]; // Lấy nhóm 2 bit từ nucl_alig

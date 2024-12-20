@@ -23,11 +23,6 @@ module RG (
     
     // Tạo seed bằng cách kết hợp giá trị P ban đầu của mỗi loài kết hợp với ID của các random
     wire [10:0] seed = (prob_A ^ prob_C ^ prob_G ^ prob_T) + instance_ID;
-    
-    // assign probability_A = prob_A;
-    // assign probability_C = prob_A + prob_C;
-    // assign probability_G = prob_A + prob_C + prob_G;
-    // assign probability_T = prob_A + prob_C + prob_G + prob_T;
 
     random_module Raninst (
         .clk(clk),

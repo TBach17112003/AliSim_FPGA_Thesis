@@ -1,192 +1,109 @@
-# vsim -do {run -all; exit} -c main 
-# Loading work.main
-# Loading work.Controller
+# vsim -do {run -all; exit} -c test_Schedule 
+# Loading work.test_Schedule
+# Loading work.Schedule
 # Loading work.PEran
 # Loading work.PE
 # Loading work.RG
 # Loading work.random_module
 # Loading work.lfsr
+# ** Warning: (vsim-3017) Schedule.v(222): [TFMPC] - Too few port connections. Expected 12, found 11.
+# 
+#         Region: /test_Schedule/TOP/Block_0
+# ** Warning: (vsim-3722) Schedule.v(222): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(233): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_1
+# ** Warning: (vsim-3722) Schedule.v(233): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(233): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(233): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(244): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_2
+# ** Warning: (vsim-3722) Schedule.v(244): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(244): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(244): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(255): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_3
+# ** Warning: (vsim-3722) Schedule.v(255): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(255): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(255): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(266): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_4
+# ** Warning: (vsim-3722) Schedule.v(266): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(266): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(266): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(277): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_5
+# ** Warning: (vsim-3722) Schedule.v(277): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(277): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(277): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(288): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_6
+# ** Warning: (vsim-3722) Schedule.v(288): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(288): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(288): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(299): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_7
+# ** Warning: (vsim-3722) Schedule.v(299): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(299): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(299): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(310): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_8
+# ** Warning: (vsim-3722) Schedule.v(310): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(310): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(310): [TFMPC] - Missing connection for port 'child_2'.
+# 
 # run -all 
-# Time:                   10, nucl_alig_0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   10, nucl_alig_1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   10, nucl_alig_2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   10, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   10, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   10, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   10, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   10, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                   30, nucl_alig_0: 01101000100111010100110101100101, final_result_0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   30, nucl_alig_1: 01101000100111010100110101100101, final_result_1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   30, nucl_alig_2: 01101000100111010100110101100101, final_result_2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   30, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   30, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   30, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   30, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   30, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                   50, nucl_alig_0: 01101000100111010100110101100101, final_result_0: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   50, nucl_alig_1: 01101000100111010100110101100101, final_result_1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   50, nucl_alig_2: 01101000100111010100110101100101, final_result_2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   50, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   50, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   50, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   50, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   50, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                   70, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 10101111111100001111000000000100
-# Time:                   70, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 00000101010110100101010110101000
-# Time:                   70, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 00010101010101101111110000000000
-# Time:                   70, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   70, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   70, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   70, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   70, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                   90, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 01101101101100011101101100011001
-# Time:                   90, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 01101111000110110110101100011011
-# Time:                   90, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 11000001101111000101101100000101
-# Time:                   90, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   90, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   90, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   90, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                   90, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  110, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 11110001101111001100011010110010
-# Time:                  110, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 11111001010011110011101001010001
-# Time:                  110, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 10010011100100110100111001001100
-# Time:                  110, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  110, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  110, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  110, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  110, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  130, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 10011110100100110011010000111010
-# Time:                  130, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 01101100100000101011000111000111
-# Time:                  130, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 00000000010101010000000001010011
-# Time:                  130, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  130, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  130, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  130, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  130, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  150, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 00001010011000001010000011000110
-# Time:                  150, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 11000010011010111011110000010110
-# Time:                  150, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 11001111101001101111101101100111
-# Time:                  150, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  150, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  150, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  150, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  150, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  170, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 10110001000010100111110111000100
-# Time:                  170, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 11001011000010110110110101110011
-# Time:                  170, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 01110111100010000011001101000111
-# Time:                  170, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  170, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  170, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  170, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  170, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  190, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 00011101000111001000011110000100
-# Time:                  190, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 10000010001010000001101110110011
-# Time:                  190, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 00101110010001111100100000100010
-# Time:                  190, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  190, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  190, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  190, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  190, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  210, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 11110110111101101111100111110100
-# Time:                  210, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 11010100000010110001111101001101
-# Time:                  210, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 11101010011000100000000011001000
-# Time:                  210, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  210, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  210, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  210, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  210, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  230, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 11000001100111101000111000011010
-# Time:                  230, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 10100001010000110100001001101100
-# Time:                  230, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 10000111011100100100001100111100
-# Time:                  230, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  230, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  230, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  230, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  230, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  250, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 10101111001001110010011110101111
-# Time:                  250, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 00110100100111111111010001101110
-# Time:                  250, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 10001101001101000011010001101000
-# Time:                  250, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  250, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  250, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  250, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  250, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  270, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 10110111101101100000111111001110
-# Time:                  270, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 10011010100110011010101010101001
-# Time:                  270, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 00111001001110010000101001001111
-# Time:                  270, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  270, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  270, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  270, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  270, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  290, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 00110100111001111100010111000001
-# Time:                  290, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 11100101111001010101111101011100
-# Time:                  290, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 01000011001111100001110010110110
-# Time:                  290, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  290, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  290, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  290, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  290, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  310, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 11100100011111101001001100111000
-# Time:                  310, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 00110011101010101001100101000111
-# Time:                  310, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 00010001110111010110011001100111
-# Time:                  310, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  310, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  310, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  310, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  310, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  330, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 01110111001000100110011001100111
-# Time:                  330, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 01100001111110101011011001101101
-# Time:                  330, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 10110001011011001011000110110001
-# Time:                  330, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  330, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  330, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  330, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  330, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  350, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 11010111011011000000011010111110
-# Time:                  350, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 01001110110101111001001011100101
-# Time:                  350, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 01010011001111100101000011001011
-# Time:                  350, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  350, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  350, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  350, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  350, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  370, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 11110001010111101110010000001010
-# Time:                  370, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 00110100111000000010011100101010
-# Time:                  370, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 11001100100010000110011001100110
-# Time:                  370, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  370, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  370, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  370, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  370, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Time:                  390, nucl_alig_0: 01101000100111010100110101100101, final_result_0: 11101110110010001111111010101010
-# Time:                  390, nucl_alig_1: 01101000100111010100110101100101, final_result_1: 11001100001000111111000010001001
-# Time:                  390, nucl_alig_2: 01101000100111010100110101100101, final_result_2: 11100100011111011111000010110011
-# Time:                  390, nucl_alig_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_3: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  390, nucl_alig_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_4: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  390, nucl_alig_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_5: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  390, nucl_alig_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_6: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# Time:                  390, nucl_alig_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, final_result_7: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# 
-# Break in Module main at main.v line 108
-# Stopped at main.v line 108 
+# Time:                   10, state: 000
+# Time:                   30, state: 000
+# Time:                   50, state: 000
+# Time:                   70, state: 000
+# Time:                   90, state: 000
+# Time:                  110, state: 000
+# Time:                  130, state: 000
+# Time:                  150, state: 000
+# Time:                  170, state: 000
+# Time:                  190, state: 000
+# Time:                  210, state: 000
+# Time:                  230, state: 000
+# Time:                  250, state: 000
+# Time:                  270, state: 000
+# Time:                  290, state: 000
+# Time:                  310, state: 000
+# Time:                  330, state: 000
+# Time:                  350, state: 000
+# Time:                  370, state: 000
+# Time:                  390, state: 000
+# Break in Module test_Schedule at test_Schedule.v line 29
+# Stopped at test_Schedule.v line 29 
 #  exit 
