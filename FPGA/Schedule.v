@@ -29,145 +29,156 @@ module Schedule (
   wire PE_is_using [0:8];
   wire PE_is_leaf [0:8];
 
-  wire [197:0] Father;
+  wire [197:0] Father, child_11, child_22;
   wire [2:0] child_1, child_2;
   reg counter;
   reg Check;
+  reg counter_state;
   assign Father = memory[0];
+  assign child_11 = memory[child_1];
+  assign child_22 = memory[child_2];
 
   always @(posedge clk or posedge reset) begin
     if (reset) begin
-      state <= S0;  // Reset to initial state
+      counter <= 1;
     end else begin
-      if (counter == 2'd1) begin
+      if (((PE_is_leaf[8] == 0) || (pe_out1[8] == 0)) && (counter == 0) && (child_1 != 0) && (counter_state == 1)) begin
+        pe_in1[1] = memory[child_1];
+        counter = 1;
+        // Check = 0;
+      end
+      else if (counter == 2'd1 && (child_2 != 0) && (counter_state == 1)) begin
         pe_in1[1] = memory[child_2];
         counter = counter - 1;
       end
-      if ((PE_is_leaf[8] == 0)) begin
-        pe_in1[1] = memory[child_1];
-        counter = 1;
-      end
     end
   end
-
+  integer i;
   always @(posedge clk or posedge reset) begin
     if (reset) begin
-      state <= S0;  // Reset to initial state
-      Check <= 0;
+      state <= S7;  // Reset to initial state
+      for (i = 0; i < 9; i = i + 1) begin
+                pe_in1[i] <= 0;
+                pe_in2[i] <= 0;
+      end
+      counter_state <= 1;
+      Check <= 1;
     end else begin
-    //     for (i = 0; i < 8; i = i + 1) begin
-    //             pe_in1[i] <= 0;
-    //             pe_in2[i] <= 0;
-    //             pe_out1[i] <= 0;
-    //             pe_out2[i] <= 0;
-    //   end
-      case (state)
-        S0: begin
-          if (Check) state <= S1;
-          pe_in1[0] = Father;
-        end
-        S1: begin
-          state <= S2;
-        //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
-          //PE_0 - PE_1
-          //PE_0 - PE_4
-          //PE_1 - PE_4
-          pe_in2[1] = pe_out1[0];
-          pe_in1[4] = pe_out2[1];
-          pe_in2[4] = pe_out2[0];
-          //PE_2 - PE_3
-          pe_in2[3] = pe_out1[2];
-          //PE_6 - PE_8
-          pe_in1[8] = pe_out2[6];
-          //PE_7 - PE_8
-          pe_in2[8] = pe_out1[7];
-        end
-        S2: begin
-          if (!PE_is_using[2] || !PE_is_using[5] || !PE_is_using[4] || !PE_is_using[0]) state <= S1;
-          else if (PE_is_using[2] && PE_is_using[5] && PE_is_using[4] && PE_is_using[0]) state <= S3;
-        //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
-          //PE_1 - PE_2
-          pe_in2[2] = pe_out1[1];
-          //PE_3 - PE_6
-          pe_in1[6] = pe_out2[3];
-          //PE_4 - PE_7
-          pe_in2[7] = pe_out2[4];
-          //PE_8 - PE_9
-        //   pe_in1[9] <= pe_out2[8];
-          pe_in1[0] = pe_out2[8];
-        end
-        S3: begin
-          if(PE_is_leaf[8]) state <= S1;
-          else state <= S4;
-        //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
-          //PE_0 - PE_1
-          //PE_0 - PE_4
-          //PE_1 - PE_4
-          pe_in2[1] = pe_out1[0];
-          pe_in1[4] = pe_out2[1];
-          pe_in2[4] = pe_out2[0];
-          //PE_2 - PE_3
-          pe_in2[3] = pe_out1[2];
-          //PE_6 - PE_8
-          pe_in1[8] = pe_out2[6];
-          //PE_7 - PE_9
-        //   pe_in2[9] <= pe_out2[7];
-          pe_in2[0] = pe_out2[7];
-        end
-        S4: begin
-          state <= S5;
-        //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
-          //PE_0 - PE_4
-          pe_in2[4] = pe_out2[0];
-          //PE_1 - PE_2
-          pe_in2[2] = pe_out1[1];
-          //PE_3 - PE_6
-          pe_in1[6] = pe_out2[3];
-          //PE_4 - PE_7
-          pe_in2[7] = pe_out2[4];
-          //PE_8 - PE_9
-        //   pe_in1[9] <= pe_out2[8];
-          pe_in1[0] = pe_out2[8];
-        end
-        S5: begin
-          state <= S6;
-        //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
-          //PE_0 - PE_1
-          //PE_0 - PE_4
-          //PE_1 - PE_4
-          pe_in2[1] = pe_out1[0];
-          pe_in1[4] = pe_out2[1];
-          pe_in2[4] = pe_out2[0];
-          //PE_2 - PE_3
-          pe_in2[3] = pe_out1[2];
-          //PE_6 - PE_8
-          pe_in1[8] = pe_out2[6];
-          //PE_7 - PE_9
-        //   pe_in2[9] <= pe_out2[7];
-          pe_in2[0] = pe_out2[7];
-          //PE_4 - PE_5
-          pe_in2[5] = pe_out1[4];
-        end
-        S6: begin
-          state <= S1;
-        //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
-          //PE_1 - PE_2
-          pe_in2[2] = pe_out1[1];
-          //PE_3 - PE_6
-          pe_in1[6] = pe_out2[3];
-          //PE_4 - PE_7
-          pe_in2[7] = pe_out2[4];
-          //PE_8 - PE_9
-        //   pe_in1[9] <= pe_out2[8];
-          pe_in1[0] = pe_out2[8];
-          //PE_5 - PE_6
-          pe_in2[6] = pe_out1[5];
-        end
-        S7: begin
-          state <= S0;
-        end
-        default: state <= S0;
-      endcase
+      if (counter_state == 1) begin
+        counter_state <= 0;
+        case (state)
+          S7: begin
+            if (Check) state <= S0;
+            if (pe_in1[0] == 0) pe_in1[0] = Father;
+          end
+          S0: begin
+            if (Check) state <= S1;
+            // if (pe_in1[0] == 0) pe_in1[0] = Father;
+          end
+          S1: begin
+            state <= S2;
+          //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
+            //PE_0 - PE_1
+            //PE_0 - PE_4
+            //PE_1 - PE_4
+            pe_in2[1] = pe_out1[0];
+            pe_in1[4] = pe_out2[1];
+            pe_in2[4] = pe_out2[0];
+            //PE_2 - PE_3
+            pe_in2[3] = pe_out1[2];
+            //PE_6 - PE_8
+            pe_in1[8] = pe_out2[6];
+            //PE_7 - PE_8
+            pe_in2[8] = pe_out1[7];
+          end
+          S2: begin
+            if (!(PE_is_leaf[1] && PE_is_leaf[4] && PE_is_leaf[3] && PE_is_leaf[8])) 
+              state <= S1;
+            else 
+              state <= S3;
+            Check <= 0;
+          //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
+            //PE_1 - PE_2
+            pe_in2[2] = pe_out1[1];
+            //PE_3 - PE_6
+            pe_in1[6] = pe_out2[3];
+            //PE_4 - PE_7
+            pe_in2[7] = pe_out2[4];
+            //PE_8 - PE_9
+          //   pe_in1[9] <= pe_out2[8];
+            pe_in1[0] = pe_out2[8];
+          end
+          S3: begin
+            if(PE_is_leaf[8]) state <= S1;
+            else state <= S4;
+          //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
+            //PE_0 - PE_1
+            //PE_0 - PE_4
+            //PE_1 - PE_4
+            pe_in2[1] = pe_out1[0];
+            pe_in1[4] = pe_out2[1];
+            pe_in2[4] = pe_out2[0];
+            //PE_2 - PE_3
+            pe_in2[3] = pe_out1[2];
+            //PE_6 - PE_8
+            pe_in1[8] = pe_out2[6];
+            //PE_7 - PE_9
+          //   pe_in2[9] <= pe_out2[7];
+            pe_in2[0] = pe_out2[7];
+          end
+          S4: begin
+            state <= S5;
+          //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
+            //PE_0 - PE_4
+            pe_in2[4] = pe_out2[0];
+            //PE_1 - PE_2
+            pe_in2[2] = pe_out1[1];
+            //PE_3 - PE_6
+            pe_in1[6] = pe_out2[3];
+            //PE_4 - PE_7
+            pe_in2[7] = pe_out2[4];
+            //PE_8 - PE_9
+          //   pe_in1[9] <= pe_out2[8];
+            pe_in1[0] = pe_out2[8];
+          end
+          S5: begin
+            state <= S6;
+          //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
+            //PE_0 - PE_1
+            //PE_0 - PE_4
+            //PE_1 - PE_4
+            pe_in2[1] = pe_out1[0];
+            pe_in1[4] = pe_out2[1];
+            pe_in2[4] = pe_out2[0];
+            //PE_2 - PE_3
+            pe_in2[3] = pe_out1[2];
+            //PE_6 - PE_8
+            pe_in1[8] = pe_out2[6];
+            //PE_7 - PE_9
+          //   pe_in2[9] <= pe_out2[7];
+            pe_in2[0] = pe_out2[7];
+            //PE_4 - PE_5
+            pe_in2[5] = pe_out1[4];
+          end
+          S6: begin
+            state <= S1;
+          //   if (PE_is_leaf[0] == 0) pe_in1[1] = matrix_child;
+            //PE_1 - PE_2
+            pe_in2[2] = pe_out1[1];
+            //PE_3 - PE_6
+            pe_in1[6] = pe_out2[3];
+            //PE_4 - PE_7
+            pe_in2[7] = pe_out2[4];
+            //PE_8 - PE_9
+          //   pe_in1[9] <= pe_out2[8];
+            pe_in1[0] = pe_out2[8];
+            //PE_5 - PE_6
+            pe_in2[6] = pe_out1[5];
+          end
+          default: state <= S7;
+        endcase
+      end
+      else counter_state <= counter_state - 1;
     end
   end
 // assign pe_in1[0]  = 

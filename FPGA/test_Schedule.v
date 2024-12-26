@@ -23,7 +23,7 @@ module test_Schedule (
    initial begin
        seed_ID = 0;
        reset = 1;
-       #5
+       #20
        reset = 0;
        #400
        $stop;

@@ -1,4 +1,5 @@
-# vsim -do {run -all; exit} -c test_Schedule 
+# ERROR: No extended dataflow license exists
+# vsim -do wave.do work.test_Schedule 
 # Loading work.test_Schedule
 # Loading work.Schedule
 # Loading work.PEran
@@ -6,23 +7,14 @@
 # Loading work.RG
 # Loading work.random_module
 # Loading work.lfsr
-# ** Warning: (vsim-3017) Schedule.v(222): [TFMPC] - Too few port connections. Expected 12, found 11.
+# ** Warning: (vsim-3017) Schedule.v(233): [TFMPC] - Too few port connections. Expected 12, found 11.
 # 
 #         Region: /test_Schedule/TOP/Block_0
-# ** Warning: (vsim-3722) Schedule.v(222): [TFMPC] - Missing connection for port 'result'.
-# 
-# ** Warning: (vsim-3017) Schedule.v(233): [TFMPC] - Too few port connections. Expected 12, found 9.
-# 
-#         Region: /test_Schedule/TOP/Block_1
 # ** Warning: (vsim-3722) Schedule.v(233): [TFMPC] - Missing connection for port 'result'.
-# 
-# ** Warning: (vsim-3722) Schedule.v(233): [TFMPC] - Missing connection for port 'child_1'.
-# 
-# ** Warning: (vsim-3722) Schedule.v(233): [TFMPC] - Missing connection for port 'child_2'.
 # 
 # ** Warning: (vsim-3017) Schedule.v(244): [TFMPC] - Too few port connections. Expected 12, found 9.
 # 
-#         Region: /test_Schedule/TOP/Block_2
+#         Region: /test_Schedule/TOP/Block_1
 # ** Warning: (vsim-3722) Schedule.v(244): [TFMPC] - Missing connection for port 'result'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(244): [TFMPC] - Missing connection for port 'child_1'.
@@ -31,7 +23,7 @@
 # 
 # ** Warning: (vsim-3017) Schedule.v(255): [TFMPC] - Too few port connections. Expected 12, found 9.
 # 
-#         Region: /test_Schedule/TOP/Block_3
+#         Region: /test_Schedule/TOP/Block_2
 # ** Warning: (vsim-3722) Schedule.v(255): [TFMPC] - Missing connection for port 'result'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(255): [TFMPC] - Missing connection for port 'child_1'.
@@ -40,7 +32,7 @@
 # 
 # ** Warning: (vsim-3017) Schedule.v(266): [TFMPC] - Too few port connections. Expected 12, found 9.
 # 
-#         Region: /test_Schedule/TOP/Block_4
+#         Region: /test_Schedule/TOP/Block_3
 # ** Warning: (vsim-3722) Schedule.v(266): [TFMPC] - Missing connection for port 'result'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(266): [TFMPC] - Missing connection for port 'child_1'.
@@ -49,7 +41,7 @@
 # 
 # ** Warning: (vsim-3017) Schedule.v(277): [TFMPC] - Too few port connections. Expected 12, found 9.
 # 
-#         Region: /test_Schedule/TOP/Block_5
+#         Region: /test_Schedule/TOP/Block_4
 # ** Warning: (vsim-3722) Schedule.v(277): [TFMPC] - Missing connection for port 'result'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(277): [TFMPC] - Missing connection for port 'child_1'.
@@ -58,7 +50,7 @@
 # 
 # ** Warning: (vsim-3017) Schedule.v(288): [TFMPC] - Too few port connections. Expected 12, found 9.
 # 
-#         Region: /test_Schedule/TOP/Block_6
+#         Region: /test_Schedule/TOP/Block_5
 # ** Warning: (vsim-3722) Schedule.v(288): [TFMPC] - Missing connection for port 'result'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(288): [TFMPC] - Missing connection for port 'child_1'.
@@ -67,7 +59,7 @@
 # 
 # ** Warning: (vsim-3017) Schedule.v(299): [TFMPC] - Too few port connections. Expected 12, found 9.
 # 
-#         Region: /test_Schedule/TOP/Block_7
+#         Region: /test_Schedule/TOP/Block_6
 # ** Warning: (vsim-3722) Schedule.v(299): [TFMPC] - Missing connection for port 'result'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(299): [TFMPC] - Missing connection for port 'child_1'.
@@ -76,34 +68,43 @@
 # 
 # ** Warning: (vsim-3017) Schedule.v(310): [TFMPC] - Too few port connections. Expected 12, found 9.
 # 
-#         Region: /test_Schedule/TOP/Block_8
+#         Region: /test_Schedule/TOP/Block_7
 # ** Warning: (vsim-3722) Schedule.v(310): [TFMPC] - Missing connection for port 'result'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(310): [TFMPC] - Missing connection for port 'child_1'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(310): [TFMPC] - Missing connection for port 'child_2'.
 # 
-# run -all 
-# Time:                   10, state: 000
-# Time:                   30, state: 000
+# ** Warning: (vsim-3017) Schedule.v(321): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_8
+# ** Warning: (vsim-3722) Schedule.v(321): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(321): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(321): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# do wave.do 
+run -all
+# Time:                   10, state: 111
+# Time:                   30, state: 111
 # Time:                   50, state: 000
 # Time:                   70, state: 000
-# Time:                   90, state: 000
-# Time:                  110, state: 000
-# Time:                  130, state: 000
-# Time:                  150, state: 000
-# Time:                  170, state: 000
-# Time:                  190, state: 000
-# Time:                  210, state: 000
-# Time:                  230, state: 000
-# Time:                  250, state: 000
-# Time:                  270, state: 000
-# Time:                  290, state: 000
-# Time:                  310, state: 000
-# Time:                  330, state: 000
-# Time:                  350, state: 000
-# Time:                  370, state: 000
-# Time:                  390, state: 000
+# Time:                   90, state: 001
+# Time:                  110, state: 001
+# Time:                  130, state: 010
+# Time:                  150, state: 010
+# Time:                  170, state: 001
+# Time:                  190, state: 001
+# Time:                  210, state: 010
+# Time:                  230, state: 010
+# Time:                  250, state: 001
+# Time:                  270, state: 001
+# Time:                  290, state: 010
+# Time:                  310, state: 010
+# Time:                  330, state: 001
+# Time:                  350, state: 001
+# Time:                  370, state: 010
+# Time:                  390, state: 010
+# Time:                  410, state: 001
 # Break in Module test_Schedule at test_Schedule.v line 29
-# Stopped at test_Schedule.v line 29 
-#  exit 

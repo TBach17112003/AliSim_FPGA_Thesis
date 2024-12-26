@@ -6,7 +6,7 @@ module PEran (
     input [197:0] in2,
     output [197:0] out1,
     output [197:0] out2,
-    output [32:0] result,
+    output [31:0] result,
     output [2:0] child_1, child_2,
     output using,
     output leaf
@@ -20,20 +20,20 @@ module PEran (
     // wire [2:0] child_1, child_2;
     wire [159:0] matrix_P;
     // Khúc này chỉ để khiểm tra lấy cái in2 hay in1 thôi
-    assign nucl_alig = (in2 != 0) ? in2[197:166]: (in1 != 0) ? in1[197:166] : 32'b0;
-    assign matrix_P = (in2 != 0) ? in2[159:0]: (in1 != 0) ? in1[159:0] : 160'b0;
-    assign child_1 = (in2 != 0) ? in2[165:163]: (in1 != 0) ? in1[165:163] : 3'b0;
-    assign child_2 = (in2 != 0) ? in2[162:160]: (in1 != 0) ? in1[162:160] : 3'b0;
+    assign nucl_alig = (in2[197:166] != 0) ? in2[197:166]: (in1[197:166] != 0) ? in1[197:166] : 32'b0;
+    assign matrix_P = (in2[159:0] != 0) ? in2[159:0]: (in1[159:0] != 0) ? in1[159:0] : 160'b0;
+    assign child_1 = (in2[165:163] != 0) ? in2[165:163]: (in1[165:163] != 0) ? in1[165:163] : 3'b0;
+    assign child_2 = (in2[162:160] != 0) ? in2[162:160]: (in1[162:160] != 0) ? in1[162:160] : 3'b0;
     assign leaf = ((in1[165:160] == 0) && (in2[165:160] == 0)) ? 1 : 0;
     assign out1 = ((nucl_alig == 0) || (matrix_P == 0)) ? {nucl_alig[31:0], child_1[2:0], child_2[2:0], matrix_P[159:0]}
                 :{final_result[31:0], child_1[2:0], child_2[2:0], 160'b0};
     assign out2 = ((nucl_alig == 0) || (matrix_P == 0)) ? {nucl_alig[31:0], child_1[2:0], child_2[2:0], matrix_P[159:0]}
                 :{final_result[31:0], child_1[2:0], child_2[2:0], 160'b0};
-    assign result = (leaf) ? final_result: 32'b0;
+    assign result = (leaf && (nucl_alig != 0)) ? final_result: 32'b0;
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            counter <= 2'b0;
+            counter <= 2'd0;
             instance_00 <= 4'b0000;
             instance_01 <= 4'b0001;
             instance_02 <= 4'b0010;

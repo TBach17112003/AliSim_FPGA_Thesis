@@ -9,7 +9,7 @@ entity PEran is
         in2             : in     vl_logic_vector(197 downto 0);
         out1            : out    vl_logic_vector(197 downto 0);
         out2            : out    vl_logic_vector(197 downto 0);
-        result          : out    vl_logic_vector(32 downto 0);
+        result          : out    vl_logic_vector(31 downto 0);
         child_1         : out    vl_logic_vector(2 downto 0);
         child_2         : out    vl_logic_vector(2 downto 0);
         using           : out    vl_logic;
