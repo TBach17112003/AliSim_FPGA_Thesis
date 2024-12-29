@@ -1,5 +1,6 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
+add wave -noupdate -expand -group top -radix hexadecimal -childformat {{{/test_Schedule/TOP/result[0]} -radix hexadecimal} {{/test_Schedule/TOP/result[1]} -radix hexadecimal} {{/test_Schedule/TOP/result[2]} -radix hexadecimal} {{/test_Schedule/TOP/result[3]} -radix hexadecimal} {{/test_Schedule/TOP/result[4]} -radix hexadecimal} {{/test_Schedule/TOP/result[5]} -radix hexadecimal} {{/test_Schedule/TOP/result[6]} -radix hexadecimal}} -expand -subitemconfig {{/test_Schedule/TOP/result[0]} {-radix hexadecimal} {/test_Schedule/TOP/result[1]} {-radix hexadecimal} {/test_Schedule/TOP/result[2]} {-radix hexadecimal} {/test_Schedule/TOP/result[3]} {-radix hexadecimal} {/test_Schedule/TOP/result[4]} {-radix hexadecimal} {/test_Schedule/TOP/result[5]} {-radix hexadecimal} {/test_Schedule/TOP/result[6]} {-radix hexadecimal}} /test_Schedule/TOP/result
 add wave -noupdate -expand -group top -radix hexadecimal /test_Schedule/TOP/clk
 add wave -noupdate -expand -group top -radix hexadecimal /test_Schedule/TOP/reset
 add wave -noupdate -expand -group top -radix hexadecimal /test_Schedule/TOP/seed_ID
@@ -60,7 +61,7 @@ add wave -noupdate -expand -group 1 -radix hexadecimal /test_Schedule/TOP/Block_
 add wave -noupdate -expand -group 1 -radix hexadecimal /test_Schedule/TOP/Block_1/child_2
 add wave -noupdate -expand -group 1 -radix hexadecimal /test_Schedule/TOP/Block_1/using
 add wave -noupdate -expand -group 1 -radix hexadecimal /test_Schedule/TOP/Block_1/leaf
-add wave -noupdate -expand -group 1 -radix hexadecimal /test_Schedule/TOP/Block_1/nucl_alig
+add wave -noupdate -expand -group 1 -radix hexadecimal -childformat {{{/test_Schedule/TOP/Block_1/nucl_alig[31]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[30]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[29]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[28]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[27]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[26]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[25]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[24]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[23]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[22]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[21]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[20]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[19]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[18]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[17]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[16]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[15]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[14]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[13]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[12]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[11]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[10]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[9]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[8]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[7]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[6]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[5]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[4]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[3]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[2]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[1]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/nucl_alig[0]} -radix hexadecimal}} -subitemconfig {{/test_Schedule/TOP/Block_1/nucl_alig[31]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[30]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[29]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[28]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[27]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[26]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[25]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[24]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[23]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[22]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[21]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[20]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[19]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[18]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[17]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[16]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[15]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[14]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[13]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[12]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[11]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[10]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[9]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[8]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[7]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[6]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[5]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[4]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[3]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[2]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[1]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/nucl_alig[0]} {-height 15 -radix hexadecimal}} /test_Schedule/TOP/Block_1/nucl_alig
 add wave -noupdate -expand -group 1 -radix hexadecimal /test_Schedule/TOP/Block_1/final_result
 add wave -noupdate -expand -group 1 -radix hexadecimal /test_Schedule/TOP/Block_1/matrix_P
 add wave -noupdate -expand -group 1 -group P -radix hexadecimal /test_Schedule/TOP/Block_1/selected_matrix_0
@@ -79,6 +80,56 @@ add wave -noupdate -expand -group 1 -group P -radix hexadecimal /test_Schedule/T
 add wave -noupdate -expand -group 1 -group P -radix hexadecimal /test_Schedule/TOP/Block_1/selected_matrix_13
 add wave -noupdate -expand -group 1 -group P -radix hexadecimal /test_Schedule/TOP/Block_1/selected_matrix_14
 add wave -noupdate -expand -group 1 -group P -radix hexadecimal /test_Schedule/TOP/Block_1/selected_matrix_15
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/clk
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/reset
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/nucl_alig
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/matrix_P
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_0
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_1
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_2
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_3
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_4
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_5
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_6
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_7
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_8
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_9
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_10
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_11
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_12
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_13
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_14
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/selected_matrix_15
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/i
+add wave -noupdate -expand -group 1 -group C0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/C0/nucl_group
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/clk
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/reset
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/prob_A
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/prob_C
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/prob_G
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/prob_T
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/instance_ID
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/result
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/random_val
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/probability_A
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/probability_C
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/probability_G
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/probability_T
+add wave -noupdate -expand -group 1 -group M1_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M1/seed
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/clk
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/reset
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/prob_A
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/prob_C
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/prob_G
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/prob_T
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/instance_ID
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal -childformat {{{/test_Schedule/TOP/Block_1/M0/result[1]} -radix hexadecimal} {{/test_Schedule/TOP/Block_1/M0/result[0]} -radix hexadecimal}} -subitemconfig {{/test_Schedule/TOP/Block_1/M0/result[1]} {-height 15 -radix hexadecimal} {/test_Schedule/TOP/Block_1/M0/result[0]} {-height 15 -radix hexadecimal}} /test_Schedule/TOP/Block_1/M0/result
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/random_val
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/probability_A
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/probability_C
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/probability_G
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/probability_T
+add wave -noupdate -expand -group 1 -group M0_block1 -radix hexadecimal /test_Schedule/TOP/Block_1/M0/seed
 add wave -noupdate -group 2 -radix hexadecimal /test_Schedule/TOP/Block_2/clk
 add wave -noupdate -group 2 -radix hexadecimal /test_Schedule/TOP/Block_2/reset
 add wave -noupdate -group 2 -radix hexadecimal /test_Schedule/TOP/Block_2/seed_ID
@@ -234,72 +285,72 @@ add wave -noupdate -group 6 -group P -radix hexadecimal /test_Schedule/TOP/Block
 add wave -noupdate -group 6 -group P -radix hexadecimal /test_Schedule/TOP/Block_6/selected_matrix_13
 add wave -noupdate -group 6 -group P -radix hexadecimal /test_Schedule/TOP/Block_6/selected_matrix_14
 add wave -noupdate -group 6 -group P -radix hexadecimal /test_Schedule/TOP/Block_6/selected_matrix_15
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/clk
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/reset
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/seed_ID
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/in1
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/in2
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/out1
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/out2
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/result
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/child_1
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/child_2
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/using
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/leaf
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/nucl_alig
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/final_result
-add wave -noupdate -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/matrix_P
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_0
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_1
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_2
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_3
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_4
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_5
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_6
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_7
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_8
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_9
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_10
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_11
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_12
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_13
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_14
-add wave -noupdate -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_15
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/clk
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/reset
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/seed_ID
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/in1
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/in2
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/out1
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/out2
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/result
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/child_1
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/child_2
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/using
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/leaf
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/nucl_alig
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/final_result
-add wave -noupdate -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/matrix_P
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_0
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_1
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_2
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_3
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_4
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_5
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_6
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_7
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_8
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_9
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_10
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_11
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_12
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_13
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_14
-add wave -noupdate -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_15
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/clk
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/reset
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/seed_ID
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/in1
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/in2
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/out1
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/out2
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/result
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/child_1
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/child_2
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/using
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/leaf
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/nucl_alig
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/final_result
+add wave -noupdate -expand -group 7 -radix hexadecimal /test_Schedule/TOP/Block_7/matrix_P
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_0
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_1
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_2
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_3
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_4
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_5
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_6
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_7
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_8
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_9
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_10
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_11
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_12
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_13
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_14
+add wave -noupdate -expand -group 7 -group P -radix hexadecimal /test_Schedule/TOP/Block_7/selected_matrix_15
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/clk
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/reset
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/seed_ID
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/in1
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/in2
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/out1
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/out2
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/result
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/child_1
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/child_2
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/using
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/leaf
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/nucl_alig
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/final_result
+add wave -noupdate -expand -group 8 -radix hexadecimal /test_Schedule/TOP/Block_8/matrix_P
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_0
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_1
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_2
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_3
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_4
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_5
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_6
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_7
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_8
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_9
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_10
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_11
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_12
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_13
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_14
+add wave -noupdate -expand -group 8 -group P -radix hexadecimal /test_Schedule/TOP/Block_8/selected_matrix_15
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {283 ps} 0}
+WaveRestoreCursors {{Cursor 1} {292 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 259
+configure wave -namecolwidth 267
 configure wave -valuecolwidth 86
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -313,4 +364,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {46 ps} {440 ps}
+WaveRestoreZoom {0 ps} {441 ps}

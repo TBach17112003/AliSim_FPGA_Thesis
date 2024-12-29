@@ -7,7 +7,8 @@ module PEran (
     output [197:0] out1,
     output [197:0] out2,
     output [31:0] result,
-    output [2:0] child_1, child_2,
+    output [2:0] child_1, 
+    output [2:0] child_2,
     output using,
     output leaf
     // output [31:0] final_result
@@ -17,20 +18,24 @@ module PEran (
             instance_05, instance_06, instance_07, instance_08, instance_09, 
             instance_10, instance_11, instance_12, instance_13, instance_14, instance_15;
     wire [31:0] nucl_alig, final_result;
-    // wire [2:0] child_1, child_2;
-    wire [159:0] matrix_P;
+    reg [2:0] child_11, child_22;
     // Khúc này chỉ để khiểm tra lấy cái in2 hay in1 thôi
+    wire [159:0] matrix_P;
+    
     assign nucl_alig = (in2[197:166] != 0) ? in2[197:166]: (in1[197:166] != 0) ? in1[197:166] : 32'b0;
-    assign matrix_P = (in2[159:0] != 0) ? in2[159:0]: (in1[159:0] != 0) ? in1[159:0] : 160'b0;
-    assign child_1 = (in2[165:163] != 0) ? in2[165:163]: (in1[165:163] != 0) ? in1[165:163] : 3'b0;
-    assign child_2 = (in2[162:160] != 0) ? in2[162:160]: (in1[162:160] != 0) ? in1[162:160] : 3'b0;
+    assign matrix_P = (in1[159:0] != 0) ? in1[159:0]: (in2[159:0] != 0) ? in2[159:0] : 160'b0;
+    assign child_1 = ((in1[159:0] != 0) && ((in1[165:163] == 0) || (in1[162:160] == 0))) ? in1[165:163] : (in1[165:163] != 0) ? in1[165:163]: (in2[165:163] != 0) ? in2[165:163] : 3'b0;
+    assign child_2 = ((in1[159:0] != 0) && ((in1[165:163] == 0) || (in1[162:160] == 0))) ? in1[162:160] : (in1[162:160] != 0) ? in1[162:160]: (in2[162:160] != 0) ? in2[162:160] : 3'b0;
+    // assign child_2 = (in1[162:160] != 0) ? in1[162:160]: (in2[162:160] != 0) ? in2[162:160] : 3'b0;
     assign leaf = ((in1[165:160] == 0) && (in2[165:160] == 0)) ? 1 : 0;
-    assign out1 = ((nucl_alig == 0) || (matrix_P == 0)) ? {nucl_alig[31:0], child_1[2:0], child_2[2:0], matrix_P[159:0]}
-                :{final_result[31:0], child_1[2:0], child_2[2:0], 160'b0};
-    assign out2 = ((nucl_alig == 0) || (matrix_P == 0)) ? {nucl_alig[31:0], child_1[2:0], child_2[2:0], matrix_P[159:0]}
-                :{final_result[31:0], child_1[2:0], child_2[2:0], 160'b0};
-    assign result = (leaf && (nucl_alig != 0)) ? final_result: 32'b0;
-
+    
+    assign result = (leaf && (nucl_alig != 0) && (matrix_P == 0)) ? nucl_alig: 32'b0;
+    assign out1 = (result != 0) ? 0 :((final_result != 0) && (nucl_alig != 0) && (matrix_P != 0)) ? {final_result[31:0], child_11, child_22, 160'b0}
+                : ((nucl_alig == 0) || (matrix_P == 0)) ? {nucl_alig[31:0], child_1[2:0], child_2[2:0], matrix_P[159:0]}
+                :  0;
+    assign out2 = (result != 0) ? 0 :((final_result != 0) && (nucl_alig != 0) && (matrix_P != 0)) ? {final_result[31:0], child_11, child_22, 160'b0}
+                : ((nucl_alig == 0) || (matrix_P == 0)) ? {nucl_alig[31:0], child_1[2:0], child_2[2:0], matrix_P[159:0]}
+                :  0;
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             counter <= 2'd0;
@@ -52,6 +57,8 @@ module PEran (
             instance_15 <= 4'b1111;
         end else begin
             // Đếm chu kỳ clock
+            child_11 = child_1;
+            child_22 = child_2;
             counter <= counter + 1;
             if (counter == 2'b10) begin
                 instance_00 <= 4'b0000 + seed_ID[3:0];
@@ -92,7 +99,7 @@ module PEran (
             end 
         end
     end
-
+    wire clean = reset;
     //Nối dây từ khối PE đến các Random
     wire [39:0] selected_matrix_0;
     wire [39:0] selected_matrix_1;
@@ -137,7 +144,7 @@ module PEran (
     );
     RG M0(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_0[39:30]),
         .prob_C(selected_matrix_0[29:20]),
         .prob_G(selected_matrix_0[19:10]),
@@ -147,7 +154,7 @@ module PEran (
     );
     RG M1(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_1[39:30]),
         .prob_C(selected_matrix_1[29:20]),
         .prob_G(selected_matrix_1[19:10]),
@@ -157,7 +164,7 @@ module PEran (
     );
     RG M2(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_2[39:30]),
         .prob_C(selected_matrix_2[29:20]),
         .prob_G(selected_matrix_2[19:10]),
@@ -167,7 +174,7 @@ module PEran (
     );
     RG M3(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_3[39:30]),
         .prob_C(selected_matrix_3[29:20]),
         .prob_G(selected_matrix_3[19:10]),
@@ -177,7 +184,7 @@ module PEran (
     );
     RG M4(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_4[39:30]),
         .prob_C(selected_matrix_4[29:20]),
         .prob_G(selected_matrix_4[19:10]),
@@ -187,7 +194,7 @@ module PEran (
     );
     RG M5(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_5[39:30]),
         .prob_C(selected_matrix_5[29:20]),
         .prob_G(selected_matrix_5[19:10]),
@@ -197,7 +204,7 @@ module PEran (
     );
     RG M6(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_6[39:30]),
         .prob_C(selected_matrix_6[29:20]),
         .prob_G(selected_matrix_6[19:10]),
@@ -207,7 +214,7 @@ module PEran (
     );
     RG M7(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_7[39:30]),
         .prob_C(selected_matrix_7[29:20]),
         .prob_G(selected_matrix_7[19:10]),
@@ -217,7 +224,7 @@ module PEran (
     );
     RG M8(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_8[39:30]),
         .prob_C(selected_matrix_8[29:20]),
         .prob_G(selected_matrix_8[19:10]),
@@ -227,7 +234,7 @@ module PEran (
     );
     RG M9(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_9[39:30]),
         .prob_C(selected_matrix_9[29:20]),
         .prob_G(selected_matrix_9[19:10]),
@@ -237,7 +244,7 @@ module PEran (
     );
     RG M10(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_10[39:30]),
         .prob_C(selected_matrix_10[29:20]),
         .prob_G(selected_matrix_10[19:10]),
@@ -247,7 +254,7 @@ module PEran (
     );
     RG M11(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_11[39:30]),
         .prob_C(selected_matrix_11[29:20]),
         .prob_G(selected_matrix_11[19:10]),
@@ -257,7 +264,7 @@ module PEran (
     );
     RG M12(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_12[39:30]),
         .prob_C(selected_matrix_12[29:20]),
         .prob_G(selected_matrix_12[19:10]),
@@ -267,7 +274,7 @@ module PEran (
     );
     RG M13(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_13[39:30]),
         .prob_C(selected_matrix_13[29:20]),
         .prob_G(selected_matrix_13[19:10]),
@@ -277,7 +284,7 @@ module PEran (
     );
     RG M14(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_14[39:30]),
         .prob_C(selected_matrix_14[29:20]),
         .prob_G(selected_matrix_14[19:10]),
@@ -287,7 +294,7 @@ module PEran (
     );
     RG M15(
         .clk(clk), 
-        .reset(reset), 
+        .reset(clean), 
         .prob_A(selected_matrix_15[39:30]),
         .prob_C(selected_matrix_15[29:20]),
         .prob_G(selected_matrix_15[19:10]),

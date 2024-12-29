@@ -16,7 +16,7 @@ module test_Schedule (
     initial begin
        clk = 0;
        forever begin
-           #10 clk = ~clk;
+           #5 clk = ~clk;
        end
    end
 
@@ -25,7 +25,7 @@ module test_Schedule (
        reset = 1;
        #20
        reset = 0;
-       #400
+       #600
        $stop;
    end
    always @(posedge clk) begin
