@@ -10,27 +10,28 @@ module Schedule (
   localparam S0 = 3'b000, S1 = 3'b001, S2 = 3'b010, S3 = 3'b011,
              S4 = 3'b100, S5 = 3'b101, S6 = 3'b110, S7 = 3'b111;
 
-  reg [197:0] memory [0:6];
+  reg [200:0] memory [0:9];
   initial begin
-    memory[0] = 198'h148D159E0C0000000000000000000000000000000000000000;
-    memory[1] = 198'h00000000131111111111111111111111111111111111111111;
-    memory[2] = 198'h00000000002222222222222222222222222222222222222222;
-    memory[3] = 198'h00000000003333333333333333333333333333333333333333;
-    memory[4] = 198'h000000002E4444444444444444444444444444444444444444;
-    memory[5] = 198'h00000000005555555555555555555555555555555555555555;
-    memory[6] = 198'h00000000006666666666666666666666666666666666666666;
+    memory[0] = 201'h0048D159E0C0000000000000000000000000000000000000000;
+    memory[1] = 201'h040000000131111111111111111111111111111111111111111;
+    memory[2] = 201'h080000000072222222222222222222222222222222222222222;
+    memory[3] = 201'h0C0000000003333333333333333333333333333333333333333;
+    memory[4] = 201'h1000000002E4444444444444444444444444444444444444444;
+    memory[5] = 201'h140000000005555555555555555555555555555555555555555;
+    memory[6] = 201'h180000000006666666666666666666666666666666666666666;
+    memory[7] = 201'h1C0000000007777777777777777777777777777777777777777;
   end
-  reg [31:0] result [0:6];
-  // Array of Processing Element=
-  reg [197:0] pe_in1 [0:8];
-  reg [197:0] pe_in2 [0:8];
-  wire [197:0] pe_out1 [0:8];
-  wire [197:0] pe_out2 [0:8];
+  reg [34:0] result [0:6];
+
+  reg [200:0] pe_in1 [0:8];
+  reg [200:0] pe_in2 [0:8];
+  wire [200:0] pe_out1 [0:8];
+  wire [200:0] pe_out2 [0:8];
   wire PE_is_using [0:8];
   wire PE_is_leaf [0:8];
 
-  wire [197:0] child_11, child_22;
-  wire [197:0] Father;
+  wire [200:0] child_11, child_22;
+  wire [200:0] Father;
   wire [2:0] child_1, child_2;
   reg counter;
   reg Check;
@@ -60,7 +61,7 @@ module Schedule (
   integer i;
   always @(posedge clk or posedge reset) begin
     if (reset) begin
-      state <= S7;  // Reset to initial state
+      state <= S0;  // Reset to initial state
       for (i = 0; i < 9; i = i + 1) begin
                 pe_in1[i] <= 0;
                 pe_in2[i] <= 0;
@@ -71,19 +72,19 @@ module Schedule (
       if (counter_state == 2) begin
         counter_state <= 0;
         case (state)
-          S7: begin
-            if (Check) state <= S0;
+          S0: begin
+            if (Check) state <= S1;
             if (pe_in1[8] == 0) begin
               pe_in1[8] <= Father;
               pe_in1[0] <= Father;
             end
           end
-          S0: begin
-            if (Check) state <= S1;
+          S1: begin
+            if (Check) state <= S2;
             pe_in1[8] <= 0;
           end
-          S1: begin
-            state <= S2;
+          S2: begin
+            state <= S3;
           //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_0 - PE_1
             //PE_0 - PE_4
@@ -118,11 +119,11 @@ module Schedule (
             pe_in2[7] <= 0;
             // pe_in2[8] <= 0;
           end
-          S2: begin
+          S3: begin
             if (!(PE_is_leaf[1] && PE_is_leaf[4] && PE_is_leaf[3] && PE_is_leaf[8])) 
-              state <= S1;
+              state <= S2;
             else 
-              state <= S3;
+              state <= S4;
             Check <= 0;
           //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_1 - PE_2
@@ -155,9 +156,9 @@ module Schedule (
             // pe_in2[7] <= 0;
             pe_in2[8] <= 0;
           end
-          S3: begin
-            if(PE_is_leaf[8]) state <= S1;
-            else state <= S4;
+          S4: begin
+            if(PE_is_leaf[8]) state <= S2;
+            else state <= S5;
           //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_0 - PE_1
             //PE_0 - PE_4
@@ -193,8 +194,8 @@ module Schedule (
             pe_in2[7] <= 0;
             pe_in2[8] <= 0;
           end
-          S4: begin
-            state <= S5;
+          S5: begin
+            state <= S6;
           //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_0 - PE_4
             pe_in2[4] <= pe_out2[0];
@@ -228,8 +229,8 @@ module Schedule (
             // pe_in2[7] <= 0;
             pe_in2[8] <= 0;
           end
-          S5: begin
-            state <= S6;
+          S6: begin
+            state <= S7;
           //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_0 - PE_1
             //PE_0 - PE_4
@@ -267,8 +268,8 @@ module Schedule (
             pe_in2[7] <= 0;
             pe_in2[8] <= 0;
           end
-          S6: begin
-            state <= S1;
+          S7: begin
+            state <= S2;
           //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_1 - PE_2
             pe_in2[2] <= pe_out1[1];
@@ -302,7 +303,7 @@ module Schedule (
             // pe_in2[7] <= 0;
             pe_in2[8] <= 0;
           end
-          default: state <= S7;
+          default: state <= S0;
         endcase
       end
       else counter_state <= counter_state - 1;
@@ -310,7 +311,7 @@ module Schedule (
   end
 
 //Khối dùng để lưu các lá
-wire [31:0] result_2, result_5, result_7;
+wire [34:0] result_2, result_5, result_7;
 reg [2:0] counter_result;
 always @(posedge clk or posedge reset) begin
     if (reset) begin
