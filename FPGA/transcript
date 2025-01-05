@@ -83,10 +83,10 @@
 # 
 #           File in use by: Admin  Hostname: DESKTOP-6L03N0R  ProcessID: 32
 # 
-#           Attempting to use alternate WLF file "./wlft4a2vfa".
+#           Attempting to use alternate WLF file "./wlft3n5r4s".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft4a2vfa
+#           Using alternate file: ./wlft3n5r4s
 # 
 run -all
 # Time:                    5, state: 000
