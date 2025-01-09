@@ -2,13 +2,13 @@ module PEran (
     input clk,
     input reset,
     input [7:0] seed_ID,
-    input [200:0] in1,
-    input [200:0] in2,
-    output [200:0] out1,
-    output [200:0] out2,
-    output [34:0] result,
-    output [2:0] child_1, 
-    output [2:0] child_2,
+    input [221:0] in1,
+    input [221:0] in2,
+    output [221:0] out1,
+    output [221:0] out2,
+    output [41:0] result,
+    output [9:0] child_1, 
+    output [9:0] child_2,
     output using,
     output leaf
     // output [31:0] final_result
@@ -18,28 +18,28 @@ module PEran (
             instance_05, instance_06, instance_07, instance_08, instance_09, 
             instance_10, instance_11, instance_12, instance_13, instance_14, instance_15;
     wire [31:0] nucl_alig, final_result;
-    wire [2:0] address;
-    reg [2:0] child_11, child_22;
+    wire [9:0] address;
+    reg [9:0] child_11, child_22;
     // Khúc này chỉ để khiểm tra lấy cái in2 hay in1 thôi
     wire [159:0] matrix_P;
-    assign address = ((in2[200:198] != 0) && (in2[197:166] == 0)) ? in2[200:198] 
-                : ((in1[200:198] != 0) && (in1[197:166] == 0)) ? in1[200:198] 
-                : (in2[200:198] != 0) ? in2[200:198]: (in1[200:198] != 0) ? in1[200:198] : 32'b0;
-    assign nucl_alig = (in2[197:166] != 0) ? in2[197:166]: (in1[197:166] != 0) ? in1[197:166] : 32'b0;
+    assign address = ((in2[221:212] != 0) && (in2[211:180] == 0)) ? in2[221:212] 
+                : ((in1[221:212] != 0) && (in1[211:180] == 0)) ? in1[221:212] 
+                : (in2[221:212] != 0) ? in2[221:212]: (in1[221:212] != 0) ? in1[221:212] : 32'b0;
+    assign nucl_alig = (in2[211:180] != 0) ? in2[211:180]: (in1[211:180] != 0) ? in1[211:180] : 32'b0;
     assign matrix_P = (in1[159:0] != 0) ? in1[159:0]: (in2[159:0] != 0) ? in2[159:0] : 160'b0;
-    assign child_1 = ((in1[159:0] != 0) && ((in1[165:163] == 0) || (in1[162:160] == 0))) ? in1[165:163] : (in1[165:163] != 0) ? in1[165:163]: (in2[165:163] != 0) ? in2[165:163] : 3'b0;
-    assign child_2 = ((in1[159:0] != 0) && ((in1[165:163] == 0) || (in1[162:160] == 0))) ? in1[162:160] : (in1[162:160] != 0) ? in1[162:160]: (in2[162:160] != 0) ? in2[162:160] : 3'b0;
-    // assign child_2 = (in1[162:160] != 0) ? in1[162:160]: (in2[162:160] != 0) ? in2[162:160] : 3'b0;
-    assign leaf = ((in1[165:160] == 0) && (in2[165:160] == 0)) ? 1 : 0;
+    assign child_1 = ((in1[159:0] != 0) && ((in1[179:170] == 0) || (in1[169:160] == 0))) ? in1[179:170] : (in1[179:170] != 0) ? in1[179:170]: (in2[179:170] != 0) ? in2[179:170] : 3'b0;
+    assign child_2 = ((in1[159:0] != 0) && ((in1[179:170] == 0) || (in1[169:160] == 0))) ? in1[169:160] : (in1[169:160] != 0) ? in1[169:160]: (in2[169:160] != 0) ? in2[169:160] : 3'b0;
+    // assign child_2 = (in1[169:160] != 0) ? in1[169:160]: (in2[169:160] != 0) ? in2[169:160] : 3'b0;
+    assign leaf = ((child_1 == 0) && (child_2 == 0)) ? 1 : 0;
     
-    assign result = (leaf && (nucl_alig != 0) && (matrix_P == 0)) ? {address[2:0], nucl_alig[31:0]}: 32'b0;
+    assign result = (leaf && (nucl_alig != 0) && (matrix_P == 0)) ? {address[9:0], nucl_alig[31:0]}: 32'b0;
 
-    assign out1 = (result != 0) ? 0 :((final_result != 0) && (nucl_alig != 0) && (matrix_P != 0)) ? {address[2:0], final_result[31:0], child_11, child_22, 160'b0}
-                : ((nucl_alig == 0) || (matrix_P == 0)) ? {address[2:0], nucl_alig[31:0], child_1[2:0], child_2[2:0], matrix_P[159:0]}
+    assign out1 = (result != 0) ? 0 :((final_result != 0) && (nucl_alig != 0) && (matrix_P != 0)) ? {address[9:0], final_result[31:0], child_11, child_22, 160'b0}
+                : ((nucl_alig == 0) || (matrix_P == 0)) ? {address[9:0], nucl_alig[31:0], child_1[9:0], child_2[9:0], matrix_P[159:0]}
                 :  0;
 
-    assign out2 = (result != 0) ? 0 :((final_result != 0) && (nucl_alig != 0) && (matrix_P != 0)) ? {address[2:0], final_result[31:0], child_11, child_22, 160'b0}
-                : ((nucl_alig == 0) || (matrix_P == 0)) ? {address[2:0], nucl_alig[31:0], child_1[2:0], child_2[2:0], matrix_P[159:0]}
+    assign out2 = (result != 0) ? 0 :((final_result != 0) && (nucl_alig != 0) && (matrix_P != 0)) ? {address[9:0], final_result[31:0], child_11, child_22, 160'b0}
+                : ((nucl_alig == 0) || (matrix_P == 0)) ? {address[9:0], nucl_alig[31:0], child_1[9:0], child_2[9:0], matrix_P[159:0]}
                 :  0;
     always @(posedge clk or posedge reset) begin
         if (reset) begin

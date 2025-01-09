@@ -25,7 +25,7 @@ module test_Schedule (
        reset = 1;
        #20
        reset = 0;
-       #600
+       #1300
        $stop;
    end
    always @(posedge clk) begin

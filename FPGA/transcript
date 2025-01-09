@@ -1,4 +1,3 @@
-# ERROR: No extended dataflow license exists
 # vsim -do wave.do work.test_Schedule 
 # Loading work.test_Schedule
 # Loading work.Schedule
@@ -7,86 +6,89 @@
 # Loading work.RG
 # Loading work.random_module
 # Loading work.lfsr
-# ** Warning: (vsim-3017) Schedule.v(353): [TFMPC] - Too few port connections. Expected 12, found 10.
+# ** Warning: (vsim-3015) test_Schedule.v(14): [PCDPC] - Port size (4 or 4) does not match connection size (3) for port 'state'. The port definition is at: Schedule.v(5).
+# 
+#         Region: /test_Schedule/TOP
+# ** Warning: (vsim-3017) Schedule.v(398): [TFMPC] - Too few port connections. Expected 12, found 10.
 # 
 #         Region: /test_Schedule/TOP/Block_0
-# ** Warning: (vsim-3722) Schedule.v(353): [TFMPC] - Missing connection for port 'result'.
-# 
-# ** Warning: (vsim-3722) Schedule.v(353): [TFMPC] - Missing connection for port 'child_2'.
-# 
-# ** Warning: (vsim-3017) Schedule.v(364): [TFMPC] - Too few port connections. Expected 12, found 9.
-# 
-#         Region: /test_Schedule/TOP/Block_1
-# ** Warning: (vsim-3722) Schedule.v(364): [TFMPC] - Missing connection for port 'result'.
-# 
-# ** Warning: (vsim-3722) Schedule.v(364): [TFMPC] - Missing connection for port 'child_1'.
-# 
-# ** Warning: (vsim-3722) Schedule.v(364): [TFMPC] - Missing connection for port 'child_2'.
-# 
-# ** Warning: (vsim-3017) Schedule.v(376): [TFMPC] - Too few port connections. Expected 12, found 10.
-# 
-#         Region: /test_Schedule/TOP/Block_2
-# ** Warning: (vsim-3722) Schedule.v(376): [TFMPC] - Missing connection for port 'child_1'.
-# 
-# ** Warning: (vsim-3722) Schedule.v(376): [TFMPC] - Missing connection for port 'child_2'.
-# 
-# ** Warning: (vsim-3017) Schedule.v(387): [TFMPC] - Too few port connections. Expected 12, found 9.
-# 
-#         Region: /test_Schedule/TOP/Block_3
-# ** Warning: (vsim-3722) Schedule.v(387): [TFMPC] - Missing connection for port 'result'.
-# 
-# ** Warning: (vsim-3722) Schedule.v(387): [TFMPC] - Missing connection for port 'child_1'.
-# 
-# ** Warning: (vsim-3722) Schedule.v(387): [TFMPC] - Missing connection for port 'child_2'.
-# 
-# ** Warning: (vsim-3017) Schedule.v(398): [TFMPC] - Too few port connections. Expected 12, found 9.
-# 
-#         Region: /test_Schedule/TOP/Block_4
 # ** Warning: (vsim-3722) Schedule.v(398): [TFMPC] - Missing connection for port 'result'.
-# 
-# ** Warning: (vsim-3722) Schedule.v(398): [TFMPC] - Missing connection for port 'child_1'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(398): [TFMPC] - Missing connection for port 'child_2'.
 # 
-# ** Warning: (vsim-3017) Schedule.v(410): [TFMPC] - Too few port connections. Expected 12, found 10.
+# ** Warning: (vsim-3017) Schedule.v(409): [TFMPC] - Too few port connections. Expected 12, found 9.
 # 
-#         Region: /test_Schedule/TOP/Block_5
-# ** Warning: (vsim-3722) Schedule.v(410): [TFMPC] - Missing connection for port 'child_1'.
+#         Region: /test_Schedule/TOP/Block_1
+# ** Warning: (vsim-3722) Schedule.v(409): [TFMPC] - Missing connection for port 'result'.
 # 
-# ** Warning: (vsim-3722) Schedule.v(410): [TFMPC] - Missing connection for port 'child_2'.
+# ** Warning: (vsim-3722) Schedule.v(409): [TFMPC] - Missing connection for port 'child_1'.
 # 
-# ** Warning: (vsim-3017) Schedule.v(421): [TFMPC] - Too few port connections. Expected 12, found 9.
+# ** Warning: (vsim-3722) Schedule.v(409): [TFMPC] - Missing connection for port 'child_2'.
 # 
-#         Region: /test_Schedule/TOP/Block_6
-# ** Warning: (vsim-3722) Schedule.v(421): [TFMPC] - Missing connection for port 'result'.
+# ** Warning: (vsim-3017) Schedule.v(421): [TFMPC] - Too few port connections. Expected 12, found 10.
 # 
+#         Region: /test_Schedule/TOP/Block_2
 # ** Warning: (vsim-3722) Schedule.v(421): [TFMPC] - Missing connection for port 'child_1'.
 # 
 # ** Warning: (vsim-3722) Schedule.v(421): [TFMPC] - Missing connection for port 'child_2'.
 # 
-# ** Warning: (vsim-3017) Schedule.v(433): [TFMPC] - Too few port connections. Expected 12, found 10.
+# ** Warning: (vsim-3017) Schedule.v(432): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_3
+# ** Warning: (vsim-3722) Schedule.v(432): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(432): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(432): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(443): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_4
+# ** Warning: (vsim-3722) Schedule.v(443): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(443): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(443): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(455): [TFMPC] - Too few port connections. Expected 12, found 10.
+# 
+#         Region: /test_Schedule/TOP/Block_5
+# ** Warning: (vsim-3722) Schedule.v(455): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(455): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(466): [TFMPC] - Too few port connections. Expected 12, found 9.
+# 
+#         Region: /test_Schedule/TOP/Block_6
+# ** Warning: (vsim-3722) Schedule.v(466): [TFMPC] - Missing connection for port 'result'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(466): [TFMPC] - Missing connection for port 'child_1'.
+# 
+# ** Warning: (vsim-3722) Schedule.v(466): [TFMPC] - Missing connection for port 'child_2'.
+# 
+# ** Warning: (vsim-3017) Schedule.v(478): [TFMPC] - Too few port connections. Expected 12, found 10.
 # 
 #         Region: /test_Schedule/TOP/Block_7
-# ** Warning: (vsim-3722) Schedule.v(433): [TFMPC] - Missing connection for port 'child_1'.
+# ** Warning: (vsim-3722) Schedule.v(478): [TFMPC] - Missing connection for port 'child_1'.
 # 
-# ** Warning: (vsim-3722) Schedule.v(433): [TFMPC] - Missing connection for port 'child_2'.
+# ** Warning: (vsim-3722) Schedule.v(478): [TFMPC] - Missing connection for port 'child_2'.
 # 
-# ** Warning: (vsim-3017) Schedule.v(446): [TFMPC] - Too few port connections. Expected 12, found 10.
+# ** Warning: (vsim-3017) Schedule.v(491): [TFMPC] - Too few port connections. Expected 12, found 10.
 # 
 #         Region: /test_Schedule/TOP/Block_8
-# ** Warning: (vsim-3722) Schedule.v(446): [TFMPC] - Missing connection for port 'result'.
+# ** Warning: (vsim-3722) Schedule.v(491): [TFMPC] - Missing connection for port 'result'.
 # 
-# ** Warning: (vsim-3722) Schedule.v(446): [TFMPC] - Missing connection for port 'child_1'.
+# ** Warning: (vsim-3722) Schedule.v(491): [TFMPC] - Missing connection for port 'child_1'.
 # 
 # do wave.do 
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Admin  Hostname: DESKTOP-6L03N0R  ProcessID: 32
 # 
-#           Attempting to use alternate WLF file "./wlft3n5r4s".
+#           Attempting to use alternate WLF file "./wlftywcx41".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft3n5r4s
+#           Using alternate file: ./wlftywcx41
 # 
 run -all
 # Time:                    5, state: 000
@@ -151,4 +153,74 @@ run -all
 # Time:                  595, state: 011
 # Time:                  605, state: 010
 # Time:                  615, state: 010
+# Time:                  625, state: 010
+# Time:                  635, state: 011
+# Time:                  645, state: 011
+# Time:                  655, state: 011
+# Time:                  665, state: 010
+# Time:                  675, state: 010
+# Time:                  685, state: 010
+# Time:                  695, state: 011
+# Time:                  705, state: 011
+# Time:                  715, state: 011
+# Time:                  725, state: 100
+# Time:                  735, state: 100
+# Time:                  745, state: 100
+# Time:                  755, state: 101
+# Time:                  765, state: 101
+# Time:                  775, state: 101
+# Time:                  785, state: 110
+# Time:                  795, state: 110
+# Time:                  805, state: 110
+# Time:                  815, state: 011
+# Time:                  825, state: 011
+# Time:                  835, state: 011
+# Time:                  845, state: 010
+# Time:                  855, state: 010
+# Time:                  865, state: 010
+# Time:                  875, state: 011
+# Time:                  885, state: 011
+# Time:                  895, state: 011
+# Time:                  905, state: 010
+# Time:                  915, state: 010
+# Time:                  925, state: 010
+# Time:                  935, state: 011
+# Time:                  945, state: 011
+# Time:                  955, state: 011
+# Time:                  965, state: 010
+# Time:                  975, state: 010
+# Time:                  985, state: 010
+# Time:                  995, state: 011
+# Time:                 1005, state: 011
+# Time:                 1015, state: 011
+# Time:                 1025, state: 010
+# Time:                 1035, state: 010
+# Time:                 1045, state: 010
+# Time:                 1055, state: 011
+# Time:                 1065, state: 011
+# Time:                 1075, state: 011
+# Time:                 1085, state: 010
+# Time:                 1095, state: 010
+# Time:                 1105, state: 010
+# Time:                 1115, state: 011
+# Time:                 1125, state: 011
+# Time:                 1135, state: 011
+# Time:                 1145, state: 010
+# Time:                 1155, state: 010
+# Time:                 1165, state: 010
+# Time:                 1175, state: 011
+# Time:                 1185, state: 011
+# Time:                 1195, state: 011
+# Time:                 1205, state: 010
+# Time:                 1215, state: 010
+# Time:                 1225, state: 010
+# Time:                 1235, state: 011
+# Time:                 1245, state: 011
+# Time:                 1255, state: 011
+# Time:                 1265, state: 010
+# Time:                 1275, state: 010
+# Time:                 1285, state: 010
+# Time:                 1295, state: 011
+# Time:                 1305, state: 011
+# Time:                 1315, state: 011
 # Break in Module test_Schedule at test_Schedule.v line 29
