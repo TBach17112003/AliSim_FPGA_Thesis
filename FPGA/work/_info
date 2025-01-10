@@ -5,11 +5,11 @@ cModel Technology
 Z0 dG:\Torture\RESEARCH\ADN_ARN\Alisim_code\FPGA
 vController
 !i10b 1
-Z1 !s100 zC:mXj869V[QnCFA[E3i32
-Z2 IO@eA[22Sce;J[OmJzSZ3;3
+Z1 !s100 9NTVJLAbgWMOo_kCeDe2J2
+Z2 IXRemTl`G_K:>@1aF2f`j^2
 Z3 VL7keZ;4=7:Sgm6zKPkATm3
 Z4 dG:\Torture\RESEARCH\ADN_ARN\Alisim_code\AliSim_FPGA_Thesis\FPGA
-Z5 w1732359704
+Z5 w1736522567
 Z6 8controller.v
 Z7 Fcontroller.v
 L0 1
@@ -17,7 +17,7 @@ Z8 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z9 !s108 1736434410.373000
+Z9 !s108 1736525496.964000
 Z10 !s107 test_Schedule.v|test_random.v|test_PEran.v|test_PE.v|test_main.v|test_Controller.v|test.v|SRR.v|Schedule.v|Sampling.v|RO.v|RG.v|random_module.v|PEran.v|PE.v|neoRNG.v|main.v|lfsr.v|latch.v|ff.v|DB.v|Counter.v|controller.v|
 Z11 !s90 controller.v|Counter.v|DB.v|ff.v|latch.v|lfsr.v|main.v|neoRNG.v|PE.v|PEran.v|random_module.v|RG.v|RO.v|Sampling.v|Schedule.v|SRR.v|test.v|test_Controller.v|test_main.v|test_PE.v|test_PEran.v|test_random.v|test_Schedule.v|
 !s101 -O0
@@ -305,7 +305,7 @@ Z103 !s100 l=14Yd=?lKm=M@TW1Dgz82
 Z104 IBh]:JJ9?9[2^;[8]3<>H30
 Z105 VT;3[;@7dKBDEaji_18ZB`0
 R4
-Z106 w1733572691
+Z106 w1736434774
 8RG.v
 FRG.v
 L0 1
@@ -441,13 +441,13 @@ o-O0
 Z138 n@sampling
 vSchedule
 !i10b 1
-!s100 >EFDefU<4NjR]=3<@?CY@1
-IdH;L]2Wm>QIA]mjlUK^Qo3
-Z139 VVUKY4K7CBOPW51zB>ZTiX2
+Z139 !s100 :PR[cQglF9:EL4PLEPi7@3
+Z140 Ibn^eeR8NQi@fkDEHj1KAO0
+Z141 VVUKY4K7CBOPW51zB>ZTiX2
 R4
-w1736434408
-Z140 8Schedule.v
-Z141 FSchedule.v
+Z142 w1736525433
+Z143 8Schedule.v
+Z144 FSchedule.v
 L0 1
 R8
 r1
@@ -458,16 +458,16 @@ R10
 R11
 !s101 -O0
 o-O0
-Z142 n@schedule
+Z145 n@schedule
 vSRR
 !i10b 1
-Z143 !s100 VePWmP[4dLAMTVEmB1jhN2
-Z144 IBgC83P`[d:l4k=HZZBg>b1
-Z145 VdQ[dYHfQBaJFCVl^SgPJb3
+Z146 !s100 VePWmP[4dLAMTVEmB1jhN2
+Z147 IBgC83P`[d:l4k=HZZBg>b1
+Z148 VdQ[dYHfQBaJFCVl^SgPJb3
 R4
-Z146 w1733571870
-Z147 8SRR.v
-Z148 FSRR.v
+Z149 w1733571870
+Z150 8SRR.v
+Z151 FSRR.v
 L0 1
 R8
 r1
@@ -478,12 +478,12 @@ R10
 R11
 !s101 -O0
 o-O0
-Z149 n@s@r@r
+Z152 n@s@r@r
 vtest
 !i10b 1
-Z150 !s100 WHe6BkkOYTZYIW9YfoRlF1
-Z151 IkYi8]b5U6?eo:58o:4>1<3
-Z152 Vk<3<[f=78GX=_HO53D;7>3
+Z153 !s100 WHe6BkkOYTZYIW9YfoRlF1
+Z154 IkYi8]b5U6?eo:58o:4>1<3
+Z155 Vk<3<[f=78GX=_HO53D;7>3
 R4
 R16
 R59
@@ -500,13 +500,13 @@ R11
 o-O0
 vtest_neoRNG
 !i10b 1
-Z153 !s100 iTad83b`=Olf4zM?25I0n3
-Z154 I>BKf=jmNJCgCWa0]TFEYH2
-Z155 V@kLe4S>JBae@0A^^E=b;>1
+Z156 !s100 iTad83b`=Olf4zM?25I0n3
+Z157 I>BKf=jmNJCgCWa0]TFEYH2
+Z158 V@kLe4S>JBae@0A^^E=b;>1
 R4
-Z156 w1733572082
-Z157 8test.v
-Z158 Ftest.v
+Z159 w1733572082
+Z160 8test.v
+Z161 Ftest.v
 L0 2
 R8
 r1
@@ -517,16 +517,16 @@ R10
 R11
 !s101 -O0
 o-O0
-Z159 ntest_neo@r@n@g
+Z162 ntest_neo@r@n@g
 vtest_RO
 !i10b 1
-Z160 !s100 >F>NjF>zn<_ch=AEA1[Sg2
-Z161 IBL8:=RAjWk^ZeK9n[YzJ@1
-Z162 VNfEig08ZdzzobaWMaD_2H2
+Z163 !s100 >F>NjF>zn<_ch=AEA1[Sg2
+Z164 IBL8:=RAjWk^ZeK9n[YzJ@1
+Z165 VNfEig08ZdzzobaWMaD_2H2
 R4
-R156
-R157
-R158
+R159
+R160
+R161
 L0 50
 R8
 r1
@@ -537,16 +537,16 @@ R10
 R11
 !s101 -O0
 o-O0
-Z163 ntest_@r@o
+Z166 ntest_@r@o
 vtest_Schedule
 !i10b 1
-Z164 !s100 2kA170dg3PEZXm^MZZo<D2
-Z165 IAGkDoL>cHL0^G@jh;dE[@3
-Z166 V1iDJZeB9FAhE3BojDzokV2
+Z167 !s100 2kA170dg3PEZXm^MZZo<D2
+Z168 IAGkDoL>cHL0^G@jh;dE[@3
+Z169 V1iDJZeB9FAhE3BojDzokV2
 R4
-Z167 w1736408778
-Z168 8test_Schedule.v
-Z169 Ftest_Schedule.v
+Z170 w1736408778
+Z171 8test_Schedule.v
+Z172 Ftest_Schedule.v
 L0 2
 R8
 r1
@@ -557,4 +557,4 @@ R10
 R11
 !s101 -O0
 o-O0
-Z170 ntest_@schedule
+Z173 ntest_@schedule

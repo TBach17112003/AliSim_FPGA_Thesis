@@ -9,18 +9,7 @@ module Controller (
   //reg [2:0] cycle_counter;
   // Tách dữ liệu đọc được
   initial begin
-    // Đọc dữ liệu từ tệp 'data.txt' vào bộ nhớ memory[0]
     $readmemb("output.txt", memory);  
-    //cycle_counter = 0;
-    // Hiển thị kết quả đã đọc
-    // $display("Data[0]: %b\n", memory[0]);
-    // $display("Data[1]: %b\n", memory[1]);
-    // $display("Data[2]: %b\n", memory[2]);
-    // $display("Data[3]: %b\n", memory[3]);
-    // $display("Data[4]: %b\n", memory[4]);
-    // $display("Data[5]: %b\n", memory[5]);
-    // $display("Data[6]: %b\n", memory[6]);
-    // $display("Data[7]: %b\n", memory[7]);
   end
   always @(posedge clk or posedge reset) begin
     if (reset) begin

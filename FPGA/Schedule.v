@@ -13,17 +13,8 @@ module Schedule (
   reg [221:0] memory [0:1024];
   initial begin
     $readmemb("tree_convert.txt", memory);
-    // memory[0] = 201'h0048D159E0C0000000000000000000000000000000000000000;
-    // memory[1] = 201'h040000000131111111111111111111111111111111111111111;
-    // memory[2] = 201'h080000000072222222222222222222222222222222222222222;
-    // memory[3] = 201'h0C0000000003333333333333333333333333333333333333333;
-    // memory[4] = 201'h1000000002E4444444444444444444444444444444444444444;
-    // memory[5] = 201'h140000000005555555555555555555555555555555555555555;
-    // memory[6] = 201'h180000000006666666666666666666666666666666666666666;
-    // memory[7] = 201'h1C0000000007777777777777777777777777777777777777777;
   end
   
-
   reg [41:0] result [0:31];
   reg [221:0] pe_in1 [0:8];
   reg [221:0] pe_in2 [0:8];
@@ -94,7 +85,6 @@ module Schedule (
           end
           S2: begin
             state <= S3;
-          //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_0 - PE_1
             //PE_0 - PE_4
             //PE_1 - PE_4
@@ -109,62 +99,40 @@ module Schedule (
             pe_in2[8] <= pe_out1[7];
             //xóa giá trị trước đó
             pe_in1[0] <= 0;
-            // if (counter == 0) pe_in1[1] <= 0;
-            // pe_in1[2] <= 0;
-            // pe_in1[3] <= 0;
-            // pe_in1[4] <= 0;
             pe_in1[5] <= 0;
             pe_in1[6] <= 0;
             pe_in1[7] <= 0;
-            // pe_in1[8] <= 0;
-            //
             pe_in2[0] <= 0;
-            // pe_in2[1] <= 0;
             pe_in2[2] <= 0;
-            // pe_in2[3] <= 0;
-            // pe_in2[4] <= 0;
             pe_in2[5] <= 0;
             pe_in2[6] <= 0;
             pe_in2[7] <= 0;
-            // pe_in2[8] <= 0;
           end
           S3: begin
-            // if (!(PE_is_leaf[1] && PE_is_leaf[4] && PE_is_leaf[3] && PE_is_leaf[8]))
-            //   state <= S2;
             if (!PE_is_leaf[4] && !PE_is_leaf[3])
               state <= S4;
             else 
               state <= S2;
             Check <= 0;
-          //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_1 - PE_2
             pe_in2[2] <= pe_out1[1];
             //PE_3 - PE_6
             pe_in1[6] <= pe_out2[3];
             //PE_4 - PE_7
             pe_in2[7] <= pe_out2[4];
-            //PE_8 - PE_9
-          //   pe_in1[9] <= pe_out2[8];
+            //PE_8 - PE_0
             pe_in1[0] <= pe_out2[8];
             //xóa giá trị trước đó
-            // pe_in1[0] <= 0;
-            // if (counter == 1) pe_in1[1] <= 0;
-            // pe_in1[2] <= 0;
-            // pe_in1[3] <= 0;
             pe_in1[4] <= 0;
             pe_in1[5] <= 0;
-            // pe_in1[6] <= 0;
             pe_in1[7] <= 0;
             pe_in1[8] <= 0;
-            //
             pe_in2[0] <= 0;
             pe_in2[1] <= 0;
-            // pe_in2[2] <= 0;
             pe_in2[3] <= 0;
             pe_in2[4] <= 0;
             pe_in2[5] <= 0;
             pe_in2[6] <= 0;
-            // pe_in2[7] <= 0;
             pe_in2[8] <= 0;
             //Load value
             if ((PE_is_leaf[3] == 1) && (pe_5[0] != 0)) begin
@@ -184,9 +152,8 @@ module Schedule (
             end
           end
           S4: begin
-            if(PE_is_leaf[7]) state <= S3;
+            if(PE_is_leaf[6]) state <= S3;
             else state <= S5;
-          //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_0 - PE_1
             //PE_0 - PE_4
             //PE_1 - PE_4
@@ -197,25 +164,14 @@ module Schedule (
             pe_in2[3] <= pe_out1[2];
             //PE_6 - PE_8
             pe_in1[8] <= pe_out2[6];
-            //PE_7 - PE_9
-          //   pe_in2[9] <= pe_out2[7];
+            //PE_7 - PE_0
             pe_in2[0] <= pe_out2[7];
             //xóa giá trị trước đó
             pe_in1[0] <= 0;
-            // if (counter == 0) pe_in1[1] <= 0;
-            // pe_in1[2] <= 0;
-            // pe_in1[3] <= 0;
-            // pe_in1[4] <= 0;
             pe_in1[5] <= 0;
             pe_in1[6] <= 0;
             pe_in1[7] <= 0;
-            // pe_in1[8] <= 0;
-            //
-            // pe_in2[0] <= 0;
-            // pe_in2[1] <= 0;
             pe_in2[2] <= 0;
-            // pe_in2[3] <= 0;
-            // pe_in2[4] <= 0;
             pe_in2[5] <= 0;
             pe_in2[6] <= 0;
             pe_in2[7] <= 0;
@@ -223,7 +179,6 @@ module Schedule (
           end
           S5: begin
             state <= S6;
-          //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_0 - PE_4
             pe_in2[4] <= pe_out2[0];
             //PE_1 - PE_2
@@ -232,28 +187,18 @@ module Schedule (
             pe_in1[6] <= pe_out2[3];
             //PE_4 - PE_7
             pe_in2[7] <= pe_out2[4];
-            //PE_8 - PE_9
-          //   pe_in1[9] <= pe_out2[8];
+            //PE_8 - PE_0
             pe_in1[0] <= pe_out2[8];
             //xóa giá trị trước đó
-            // pe_in1[0] <= 0;
-            // if (counter == 0) pe_in1[1] <= 0;
-            // pe_in1[2] <= 0;
-            // pe_in1[3] <= 0;
             pe_in1[4] <= 0;
             pe_in1[5] <= 0;
-            // pe_in1[6] <= 0;
             pe_in1[7] <= 0;
             pe_in1[8] <= 0;
-            //
             pe_in2[0] <= 0;
             pe_in2[1] <= 0;
-            // pe_in2[2] <= 0;
             pe_in2[3] <= 0;
-            // pe_in2[4] <= 0;
             pe_in2[5] <= 0;
             pe_in2[6] <= 0;
-            // pe_in2[7] <= 0;
             pe_in2[8] <= 0;
             //Load value
             if ((PE_is_leaf[3] == 1) && (pe_5[0] != 0)) begin
@@ -274,7 +219,6 @@ module Schedule (
           end
           S6: begin
             state <= S3;
-          //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
             //PE_0 - PE_1
             //PE_0 - PE_4
             //PE_1 - PE_4
@@ -293,67 +237,20 @@ module Schedule (
             address_store = address_store + 1;
             //xóa giá trị trước đó
             pe_in1[0] <= 0;
-            // if (counter == 0) pe_in1[1] <= 0;
-            // pe_in1[2] <= 0;
-            // pe_in1[3] <= 0;
-            // pe_in1[4] <= 0;
             pe_in1[5] <= 0;
             pe_in1[6] <= 0;
             pe_in1[7] <= 0;
-            // pe_in1[8] <= 0;
-            //
-            // pe_in2[0] <= 0;
-            // pe_in2[1] <= 0;
             pe_in2[2] <= 0;
-            // pe_in2[3] <= 0;
-            // pe_in2[4] <= 0;
-            // pe_in2[5] <= 0;
             pe_in2[6] <= 0;
             pe_in2[7] <= 0;
           end
-          // S7: begin
-          //   state <= S2;
-          // //   if (PE_is_leaf[0] == 0) pe_in1[1] <= matrix_child;
-          //   //PE_1 - PE_2
-          //   pe_in2[2] <= pe_out1[1];
-          //   //PE_3 - PE_6
-          //   pe_in1[6] <= pe_out2[3];
-          //   //PE_4 - PE_7
-          //   pe_in2[7] <= pe_out2[4];
-          //   //PE_8 - PE_9
-          // //   pe_in1[9] <= pe_out2[8];
-          //   pe_in1[0] <= pe_out2[8];
-          //   //PE_5 - PE_6
-          //   ///////////////////////////////////////////////////
-          //   pe_in2[6] <= pe_out1[5];
-          //   //////////////////////////////////
-          //   //xóa giá trị trước đó
-          //   // pe_in1[0] <= 0;
-          //   // if (counter == 0) pe_in1[1] <= 0;
-          //   // pe_in1[2] <= 0;
-          //   // pe_in1[3] <= 0;
-          //   pe_in1[4] <= 0;
-          //   pe_in1[5] <= 0;
-          //   // pe_in1[6] <= 0;
-          //   pe_in1[7] <= 0;
-          //   pe_in1[8] <= 0;
-          //   //
-          //   pe_in2[0] <= 0;
-          //   pe_in2[1] <= 0;
-          //   // pe_in2[2] <= 0;
-          //   pe_in2[3] <= 0;
-          //   pe_in2[4] <= 0;
-          //   pe_in2[5] <= 0;
-          //   // pe_in2[6] <= 0;
-          //   // pe_in2[7] <= 0;
-          //   pe_in2[8] <= 0;
-          // end
           default: state <= S0;
         endcase
       end
       else counter_state <= counter_state - 1;
     end
   end
+
 
 //Khối dùng để lưu các lá
 wire [41:0] result_2, result_5, result_7;
@@ -384,6 +281,8 @@ always @(posedge clk or posedge reset) begin
         end
     end
 end
+
+///////////////////////////////////
 PEran Block_0 (
     .clk(clk),
     .reset(reset),
